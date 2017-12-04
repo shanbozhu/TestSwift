@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B0110E211EA8696F00732D0C /* PBSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110E201EA8696F00732D0C /* PBSwiftTests.swift */; };
-		B0110E2C1EA8696F00732D0C /* PBSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110E2B1EA8696F00732D0C /* PBSwiftUITests.swift */; };
 		B0110E411EA86A4900732D0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110E3C1EA86A4900732D0C /* AppDelegate.swift */; };
 		B0110E421EA86A4900732D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0110E3E1EA86A4900732D0C /* Assets.xcassets */; };
 		B0110E431EA86A4900732D0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0110E3F1EA86A4900732D0C /* LaunchScreen.storyboard */; };
@@ -99,11 +97,7 @@
 		B0110E081EA8696F00732D0C /* PBSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PBSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0110E171EA8696F00732D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0110E1C1EA8696F00732D0C /* PBSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PBSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0110E201EA8696F00732D0C /* PBSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBSwiftTests.swift; sourceTree = "<group>"; };
-		B0110E221EA8696F00732D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0110E271EA8696F00732D0C /* PBSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PBSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0110E2B1EA8696F00732D0C /* PBSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBSwiftUITests.swift; sourceTree = "<group>"; };
-		B0110E2D1EA8696F00732D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0110E3C1EA86A4900732D0C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0110E3E1EA86A4900732D0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0110E3F1EA86A4900732D0C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -259,8 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				B0110E0A1EA8696F00732D0C /* PBSwift */,
-				B0110E1F1EA8696F00732D0C /* PBSwiftTests */,
-				B0110E2A1EA8696F00732D0C /* PBSwiftUITests */,
 				B0110E091EA8696F00732D0C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -284,24 +276,6 @@
 				B0110E171EA8696F00732D0C /* Info.plist */,
 			);
 			path = PBSwift;
-			sourceTree = "<group>";
-		};
-		B0110E1F1EA8696F00732D0C /* PBSwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				B0110E201EA8696F00732D0C /* PBSwiftTests.swift */,
-				B0110E221EA8696F00732D0C /* Info.plist */,
-			);
-			path = PBSwiftTests;
-			sourceTree = "<group>";
-		};
-		B0110E2A1EA8696F00732D0C /* PBSwiftUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B0110E2B1EA8696F00732D0C /* PBSwiftUITests.swift */,
-				B0110E2D1EA8696F00732D0C /* Info.plist */,
-			);
-			path = PBSwiftUITests;
 			sourceTree = "<group>";
 		};
 		B0110E391EA86A4900732D0C /* 其他 */ = {
@@ -826,7 +800,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0110E211EA8696F00732D0C /* PBSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -834,7 +807,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0110E2C1EA8696F00732D0C /* PBSwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
