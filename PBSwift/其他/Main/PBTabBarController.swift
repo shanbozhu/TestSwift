@@ -18,7 +18,6 @@ class PBTabBarController: UITabBarController {
         
         
         let vc1 : PBTestTwoController = PBTestTwoController()
-        let navVc1 : UINavigationController = UINavigationController(rootViewController: vc1);
         vc1.title = "首页"
         vc1.view.backgroundColor = UIColor(red: 244.0/255, green: 244.0/255, blue: 244.0/255, alpha: 1)
         vc1.tabBarItem.image = UIImage(named: "indexA")!.withRenderingMode(.alwaysOriginal)
@@ -31,7 +30,6 @@ class PBTabBarController: UITabBarController {
 
         
         let vc2 : UIViewController = UIViewController()
-        let navVc2 : UINavigationController = UINavigationController(rootViewController: vc2)
         vc2.title = "广场"
         vc2.view.backgroundColor = UIColor(red: 244.0/255, green: 244.0/255, blue: 244.0/255, alpha: 1)
         vc2.tabBarItem.image = UIImage(named: "squareA")!.withRenderingMode(.alwaysOriginal)
@@ -43,7 +41,6 @@ class PBTabBarController: UITabBarController {
         
         
         let vc3 : UIViewController = UIViewController()
-        let navVc3 : UINavigationController = UINavigationController(rootViewController: vc3)
         vc3.title = "活动"
         vc3.view.backgroundColor = UIColor(red: 244.0/255, green: 244.0/255, blue: 244.0/255, alpha: 1)
         vc3.tabBarItem.image = UIImage(named: "exerciseA")!.withRenderingMode(.alwaysOriginal)
@@ -55,7 +52,6 @@ class PBTabBarController: UITabBarController {
         
         
         let vc4 : UIViewController = UIViewController()
-        let navVc4 : UINavigationController = UINavigationController(rootViewController: vc4)
         vc4.title = "我的"
         vc4.view.backgroundColor = UIColor(red: 244.0/255, green: 244.0/255, blue: 244.0/255, alpha: 1)
         vc4.tabBarItem.image = UIImage(named: "mineA")!.withRenderingMode(.alwaysOriginal)
@@ -66,6 +62,6 @@ class PBTabBarController: UITabBarController {
         vc4.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -2)
         
         
-        self.viewControllers = [navVc1, navVc2, navVc3, navVc4];
+        self.viewControllers = [vc1, vc2, vc3, vc4];
     }
 }

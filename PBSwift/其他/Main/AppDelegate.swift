@@ -19,9 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window : UIWindow = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         self.window!.makeKeyAndVisible()
+        self.window!.backgroundColor = UIColor.white
         
+        //tab
         let tabController : PBTabBarController = PBTabBarController()
-        self.window!.rootViewController = tabController
+        
+        //nav
+        let nav : UINavigationController = UINavigationController(rootViewController: tabController)
+        
+        //window!.rootViewController
+        self.window!.rootViewController = nav
         
         return true
     }
