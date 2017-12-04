@@ -13,8 +13,8 @@ class PBTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let attributesNormal = [NSFontAttributeName : UIFont.systemFont(ofSize: 10), NSForegroundColorAttributeName : UIColor.gray]
-        let attributesSelected = [NSFontAttributeName : UIFont.systemFont(ofSize: 10), NSForegroundColorAttributeName : UIColor.red]
+        let attributesNormal = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 10), NSAttributedStringKey.foregroundColor : UIColor.gray]
+        let attributesSelected = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 10), NSAttributedStringKey.foregroundColor : UIColor.red]
         
         
         let vc1 : PBTestTwoController = PBTestTwoController()
