@@ -24,15 +24,11 @@ class PBTestOneDataDynamic: NSObject {
     var img2 : [String]?
     var replyCount : Int = 0
     var maitianId : Int = 0
-    
     var cellHeight : CGFloat = 0
-    
     
     class func testOneDataDynamic(_ dict : [String : AnyObject]) -> PBTestOneDataDynamic {
         return PBTestOneDataDynamic(dict : dict)
     }
-    
-    
     
     init(dict : [String : AnyObject]) {
         super.init()
@@ -46,7 +42,5 @@ class PBTestOneDataDynamic: NSObject {
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
-        
     }
-    
 }

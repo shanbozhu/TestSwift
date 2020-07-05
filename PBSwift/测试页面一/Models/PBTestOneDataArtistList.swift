@@ -10,7 +10,6 @@ import UIKit
 
 class PBTestOneDataArtistList: NSObject {
 
-    
     var artistId : Int = 0
     var name : String?
     
@@ -26,7 +25,5 @@ class PBTestOneDataArtistList: NSObject {
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
-        
     }
-    
 }
