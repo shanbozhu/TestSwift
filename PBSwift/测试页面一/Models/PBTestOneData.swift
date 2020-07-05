@@ -14,7 +14,7 @@ class PBTestOneData: NSObject {
     var dynamic : [AnyObject]? //arr
     var artistList : [AnyObject]? //arr
     
-    var dynamicAddIsNull : Bool = Bool(0)
+    var dynamicAddIsNull : Bool = false
     
     
     class func testOneData(_ dict : [String : AnyObject]) -> PBTestOneData {

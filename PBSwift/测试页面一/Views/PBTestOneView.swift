@@ -57,7 +57,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
             
             weakSelf!.delegate!.testOneView!(weakSelf!, sinceId: 0, status: 0)
         }
-        header?.lastUpdatedTimeLabel!.isHidden = Bool(1)
+        header?.lastUpdatedTimeLabel!.isHidden = true
         self.tableView.header = header
         
         
@@ -85,7 +85,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
             
             //结束刷新
             self.tableView.header.endRefreshing()
-            if self.testOne!.dataModel!.dynamicAddIsNull == Bool(1) {
+            if self.testOne!.dataModel!.dynamicAddIsNull == true {
                 self.tableView.footer.noticeNoMoreData()
             } else {
                 self.tableView.footer.endRefreshing()
@@ -137,7 +137,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView .deselectRow(at: indexPath, animated: Bool(1))
+        tableView .deselectRow(at: indexPath, animated: true)
         
         
         self.delegate!.testOneView!(self)

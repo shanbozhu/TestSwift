@@ -28,7 +28,7 @@ class PBTestTwoController: UIViewController {
         print(btn)
         
         let testOneController = PBTestOneController()
-        testOneController.hidesBottomBarWhenPushed = Bool(1)
+        testOneController.hidesBottomBarWhenPushed = true
         testOneController.view.backgroundColor = UIColor.white
         
         self.navigationController!.pushViewController(testOneController, animated: Bool(1));
@@ -39,10 +39,10 @@ class PBTestTwoController: UIViewController {
         print("点我跳转")
         
         let testOneController = PBTestOneController()
-        testOneController.hidesBottomBarWhenPushed = Bool(1)
+        testOneController.hidesBottomBarWhenPushed = true
         testOneController.view.backgroundColor = UIColor.white
         
-        self.navigationController!.pushViewController(testOneController, animated: Bool(1));
+        self.navigationController!.pushViewController(testOneController, animated: true);
     }
     
 }

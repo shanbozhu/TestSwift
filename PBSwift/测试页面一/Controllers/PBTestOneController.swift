@@ -26,7 +26,7 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         loadingView.frame = CGRect(x: (sWidth-100)/2, y: (sHeight-100)/2, width: 100, height: 100)
         loadingView.setTitle("正在加载...", for: UIControlState())
         loadingView.backgroundColor = UIColor.gray
-        loadingView.isHidden = Bool(0)
+        loadingView.isHidden = false
         
         print("\(sinceId)")
 
@@ -148,8 +148,9 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         //加载模型(把模型加载到控制器)
         self.testOneView!.testOne = testOne
         
-        self.testOneView!.isHidden = Bool(0)
-
+        self.testOneView!.isHidden = false
+//        loadingView.isHidden = false
+        loadingView.isHidden = true
         
         
     }
@@ -168,7 +169,7 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         self.view.addSubview(testOneView);
         testOneView.frame = self.view.bounds;
         testOneView.backgroundColor = UIColor.white;
-        testOneView.isHidden = Bool(1)
+        testOneView.isHidden = true
         
         testOneView.delegate = self
         
@@ -182,10 +183,10 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         print("我被点击了")
         
         let vc : UIViewController = UIViewController()
-        vc.hidesBottomBarWhenPushed = Bool(1)
+        vc.hidesBottomBarWhenPushed = true
         vc.view.backgroundColor = UIColor.white
         
-        self.navigationController!.pushViewController(vc, animated:Bool(1))
+        self.navigationController!.pushViewController(vc, animated:true)
     }
     
     func testOneView(_ testOneView: PBTestOneView, sinceId: Int, status: Int) {

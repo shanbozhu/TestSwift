@@ -106,7 +106,7 @@ class PBTestOneCell: UITableViewCell {
         
         //图片
         self.twoImageView!.contentMode = .scaleAspectFill;
-        self.twoImageView!.clipsToBounds = Bool(1);
+        self.twoImageView!.clipsToBounds = true;
         self.twoImageView!.backgroundColor = UIColor.blue;
         if self.testOneDataDynamic!.img2!.count > 0 {
             
@@ -114,11 +114,11 @@ class PBTestOneCell: UITableViewCell {
             
             self.twoImageView!.sd_setImage(with: URL(string: self.testOneDataDynamic!.img2![0]), placeholderImage: UIImage(named: "zhanwei"))
             
-            self.twoImageView!.isHidden = Bool(0)
+            self.twoImageView!.isHidden = false
         } else {
             
             self.twoImageView!.frame = CGRect(x: 68, y: (self.twoLab!.frame).maxY, width: 0, height: 0)
-            self.twoImageView!.isHidden = Bool(1)
+            self.twoImageView!.isHidden = true
         }
         
         //分割线
