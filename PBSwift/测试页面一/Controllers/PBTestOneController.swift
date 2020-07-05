@@ -13,14 +13,13 @@ import UIKit
 let sWidth : CGFloat = UIScreen.main.bounds.size.width;
 let sHeight : CGFloat = UIScreen.main.bounds.size.height;
 
-//完善类的过程
+// 完善类的过程
 class PBTestOneController: UIViewController, PBTestOneViewDelegate {
 
     weak var testOneView : PBTestOneView?
     
     func requestData(_ sinceId : Int, status : Int) {
-        
-        //等待视图
+        // 等待视图
         let loadingView = UIButton(type: .custom)
         self.view.addSubview(loadingView)
         loadingView.frame = CGRect(x: (sWidth-100)/2, y: (sHeight-100)/2, width: 100, height: 100)
@@ -127,41 +126,32 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         
         //最开始要能把从网络下载的原始 json字符串 序列化为 json字典
         
-        //1.网络下载的原始 json字符串
+        // 1.网络下载的原始 json字符串
         let jsonStr : NSString = "{\"data\" : {\"dynamic\" : [{\"content\" : \"最近两天貌似进入了蘑菇期，你们说会长又悄悄干嘛去了呢？[思考]大伙儿一起来聊聊呗。[阴险][偷乐] #李宇春#\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春\",\"sourceId\" : 288757,\"sortTime\" : 1460021145000,\"dynamicTime\" : 1460021145000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3961678180208127\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6},{\"content\" : \"爱你，么么哒，晚安，好梦。你们说会长又悄悄干嘛去了呢？你们说会长又悄悄干嘛去了呢？你们说会长又悄悄干嘛去了呢？你们说会长又悄悄干嘛去了呢？你们说会长又悄悄干嘛去了呢？[思考]大伙儿一起来聊聊[思考]大伙儿一起来聊聊[思考]大伙儿一起来聊聊[思考]大伙儿一起来聊聊[思考]大伙儿一起来聊聊[思考]大伙儿一起来聊聊[思考]大伙儿一起来聊聊[思考]大伙儿一起来聊聊[思考]大伙儿一起来聊聊你们说会长又悄悄干嘛去了呢？[心]\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春疯狂工作室\",\"sourceId\" : 286715,\"sortTime\" : 1459695876000,\"dynamicTime\" : 1459695876000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3960313902310751\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6},{\"content\" : \"你们说会长又悄悄干嘛去了呢？你们说会长又悄悄干嘛去了呢？你们说会长又悄悄干嘛去了呢？你们说会长又悄悄干嘛去了呢？最近两天貌似进入了蘑菇期，你们说会长又悄悄干嘛去了呢？[思考]大伙儿一起来聊聊呗。[阴险][偷乐] #李宇春#\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春\",\"sourceId\" : 288757,\"sortTime\" : 1460021145000,\"dynamicTime\" : 1460021145000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3961678180208127\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6},{\"content\" : \"最近两天貌似进入了蘑菇期，你们说会长又悄悄干嘛去了呢？[思考]大伙儿一起来聊聊呗。你们说会长又悄悄干嘛去了呢？你们说会长又悄悄干嘛去了呢？[阴险][偷乐] #李宇春#\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春疯狂工作室\",\"sourceId\" : 288757,\"sortTime\" : 1460021145000,\"dynamicTime\" : 1460021145000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3961678180208127\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6},{\"content\" : \"最近两天貌似进入了蘑菇期，你们似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又说会长又悄悄干嘛去了呢？[思考]大伙儿一起来聊聊呗。[阴险][偷乐] #李宇春#\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春疯狂工作室\",\"sourceId\" : 288757,\"sortTime\" : 1460021145000,\"dynamicTime\" : 1460021145000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3961678180208127\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6},{\"content\" : \"爱你，么么哒，似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又晚安，好梦。[心]\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春\",\"sourceId\" : 286715,\"sortTime\" : 1459695876000,\"dynamicTime\" : 1459695876000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3960313902310751\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6},{\"content\" : \"爱你，么么哒，晚安，好梦。[心]\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春疯狂工作室\",\"sourceId\" : 286715,\"sortTime\" : 1459695876000,\"dynamicTime\" : 1459695876000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3960313902310751\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6},{\"content\" : \"爱你，么么哒，晚安，好梦。[心]\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春\",\"sourceId\" : 286715,\"sortTime\" : 1459695876000,\"dynamicTime\" : 1459695876000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3960313902310751\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6},{\"content\" : \"爱你，么么哒，晚安，好梦。[心]\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春疯狂工作室\",\"sourceId\" : 286715,\"sortTime\" : 1459695876000,\"dynamicTime\" : 1459695876000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3960313902310751\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6},{\"content\" : \"爱你，么么哒，似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又晚安，好梦。[心]\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春\",\"sourceId\" : 286715,\"sortTime\" : 1459695876000,\"dynamicTime\" : 1459695876000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3960313902310751\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6},{\"content\" : \"爱你，么么哒，似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又晚安，好梦。[心]\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春\",\"sourceId\" : 286715,\"sortTime\" : 1459695876000,\"dynamicTime\" : 1459695876000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3960313902310751\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6},{\"content\" : \"爱你，么么哒，似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又晚安，好梦。[心]\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春\",\"sourceId\" : 286715,\"sortTime\" : 1459695876000,\"dynamicTime\" : 1459695876000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3960313902310751\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6},{\"content\" : \"似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又爱你，么么哒，晚安，好梦。[心]\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春疯狂工作室\",\"sourceId\" : 286715,\"sortTime\" : 1459695876000,\"dynamicTime\" : 1459695876000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3960313902310751\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6},{\"content\" : \"爱你，么么哒，晚安，好梦。[心]\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春\",\"sourceId\" : 286715,\"sortTime\" : 1459695876000,\"dynamicTime\" : 1459695876000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3960313902310751\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6},{\"content\" : \"爱你，么么哒，似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又晚安，好梦。[心]\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春\",\"sourceId\" : 286715,\"sortTime\" : 1459695876000,\"dynamicTime\" : 1459695876000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3960313902310751\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6},{\"content\" : \"爱你，么么哒，似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又似进入了蘑菇期，你们说会长又晚安，好梦。[心]\",\"isSupport\" : 0,\"type\" : 4,\"title\" : \"李宇春疯狂工作室\",\"sourceId\" : 286715,\"sortTime\" : 1459695876000,\"dynamicTime\" : 1459695876000,\"favorCount\" : 0,\"socialType\" : 4,\"statusId\" : \"3960313902310751\",\"artId\" : \"2723838314\",\"img2\" : [],\"replyCount\" : 0,\"maitianId\" : 6}],\"artistList\" : [{\"artistId\" : 67,\"name\" : \"李宇春\"},{\"artistId\" : 197,\"name\" : \"李宇春疯狂工作室\"}]},\"code\" : 200}"
         
-        //字符串先转化为二进制数据作为中转
+        // 字符串先转化为二进制数据作为中转
         let data : Data = jsonStr.data(using: 4)!
 //        let data : NSData = jsonStr.dataUsingEncoding(NSUTF8StringEncoding)!
         
         
-        //2.序列化为 json字典
-//        let jsonDict : [String : AnyObject] = try! NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! [String : AnyObject]
+        // 2.序列化为 json字典
         let jsonDict : [String : AnyObject] = try! JSONSerialization.jsonObject(with: (data as! NSData) as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String : AnyObject]
         
-        
-        
-        //封装模型(把字典封装成模型)
+        // 封装模型(把字典封装成模型)
         let testOne = PBTestOne.testOne(jsonDict)
         
-        
-        //加载模型(把模型加载到控制器)
+        // 加载模型(把模型加载到控制器)
         self.testOneView!.testOne = testOne
         
         self.testOneView!.isHidden = false
-//        loadingView.isHidden = false
         loadingView.isHidden = true
-        
-        
     }
     
-    
-    //控制器的默认视图加载完毕之后会调用此方法
+    // 控制器的默认视图加载完毕之后会调用此方法
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         
-        //加载视图(把视图加载到控制器)
+        // 加载视图(把视图加载到控制器)
         //let testOneView : PBTestOneView = PBTestOneView(frame : CGRectZero);
         //let testOneView : PBTestOneView = PBTestOneView.init(frame: CGRectZero);
         let testOneView : PBTestOneView = PBTestOneView.testOneView();
@@ -173,12 +163,10 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         
         testOneView.delegate = self
         
-        
-        //填充视图(把模型填充到视图)
+        // 填充视图(把模型填充到视图)
         self.requestData(0, status: 0)
     }
 
-    
     func testOneView(_ testOneView: PBTestOneView) {
         print("我被点击了")
         
@@ -195,26 +183,9 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         self.requestData(sinceId, status: status)
     }
     
-    
-    
-    
-    
     deinit {
         print("PBTestOneController对象被释放了")
     }
-        
-        
-    
-    
-    
-        
-    
-    
-    
-    
-    
-    
-    
     
     func stringWithDictionary(_ jsonDict : [String : AnyObject]) -> String {
         let data : Data = try! JSONSerialization.data(withJSONObject: jsonDict, options: JSONSerialization.WritingOptions.prettyPrinted)
@@ -228,7 +199,4 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         let jsonDict : [String : AnyObject] = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String : AnyObject]
         return jsonDict
     }
-
 }
-
-
