@@ -9,7 +9,7 @@
 #ifndef PBBridgingHeader_h
 #define PBBridgingHeader_h
 
-//头文件只编译,不链接
+// 头文件只编译,不链接
 #import "AFNetworking.h"
 #import "TTTAttributedLabel.h"
 #import "UIImageView+WebCache.h"

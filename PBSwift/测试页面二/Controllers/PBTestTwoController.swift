@@ -11,15 +11,12 @@ import UIKit
 class PBTestTwoController: UIViewController {
 
     override func viewDidLoad() {
-        
-        
         let btn : UIButton = UIButton(type: .custom)
         self.view.addSubview(btn)
         btn.frame = CGRect(x: 100, y: 200, width: 100, height: 100);
         btn.backgroundColor = UIColor.red
         btn.setTitle("点我跳转", for: UIControlState())
         btn.addTarget(self, action: #selector(PBTestTwoController.btnClick(_:)), for: .touchUpInside)
-        
     }
     
     func btnClick(_ btn : UIButton) {
@@ -34,7 +31,6 @@ class PBTestTwoController: UIViewController {
         self.navigationController!.pushViewController(testOneController, animated: Bool(1));
     }
     
-    
     func btnClick() {
         print("点我跳转")
         
@@ -44,5 +40,4 @@ class PBTestTwoController: UIViewController {
         
         self.navigationController!.pushViewController(testOneController, animated: true);
     }
-    
 }

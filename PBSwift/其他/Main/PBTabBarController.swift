@@ -12,10 +12,9 @@ class PBTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let attributesNormal = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 10), NSAttributedStringKey.foregroundColor : UIColor.gray]
         let attributesSelected = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 10), NSAttributedStringKey.foregroundColor : UIColor.red]
-        
         
         let vc1 : PBTestTwoController = PBTestTwoController()
         vc1.title = "首页"
@@ -27,8 +26,6 @@ class PBTabBarController: UITabBarController {
         vc1.tabBarItem.setTitleTextAttributes(attributesSelected, for: .selected)
         vc1.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -2)
         
-
-        
         let vc2 : UIViewController = UIViewController()
         vc2.title = "广场"
         vc2.view.backgroundColor = UIColor(red: 244.0/255, green: 244.0/255, blue: 244.0/255, alpha: 1)
@@ -38,7 +35,6 @@ class PBTabBarController: UITabBarController {
         vc2.tabBarItem.setTitleTextAttributes(attributesNormal, for: UIControlState())
         vc2.tabBarItem.setTitleTextAttributes(attributesSelected, for: .selected)
         vc2.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -2)
-        
         
         let vc3 : UIViewController = UIViewController()
         vc3.title = "活动"
@@ -50,7 +46,6 @@ class PBTabBarController: UITabBarController {
         vc3.tabBarItem.setTitleTextAttributes(attributesSelected, for: .selected)
         vc3.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -2)
         
-        
         let vc4 : UIViewController = UIViewController()
         vc4.title = "我的"
         vc4.view.backgroundColor = UIColor(red: 244.0/255, green: 244.0/255, blue: 244.0/255, alpha: 1)
@@ -60,7 +55,6 @@ class PBTabBarController: UITabBarController {
         vc4.tabBarItem.setTitleTextAttributes(attributesNormal, for: UIControlState())
         vc4.tabBarItem.setTitleTextAttributes(attributesSelected, for: .selected)
         vc4.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -2)
-        
         
         self.viewControllers = [vc1, vc2, vc3, vc4];
     }
