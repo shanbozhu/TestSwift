@@ -6,8 +6,6 @@
 //  Copyright © 2016年 朱善波. All rights reserved.
 //
 
-
-
 import UIKit
 
 let sWidth : CGFloat = UIScreen.main.bounds.size.width;
