@@ -52,11 +52,11 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
             let jsonStr = weakSelf!.stringWithDictionary(jsonDict)
             print("jsonStr = \(jsonStr)")
             
-            //封装模型(把字典封装成模型)
+            // 封装模型(把字典封装成模型)
             let testOne = PBTestOne.testOne(jsonDict)
             
             if testOne.code == 200 {
-                //加载模型(把模型加载到控制器)
+                // 加载模型(把模型加载到控制器)
                 if status == 0 {
                     weakSelf!.testOneView!.testOne = testOne
                 } else {
