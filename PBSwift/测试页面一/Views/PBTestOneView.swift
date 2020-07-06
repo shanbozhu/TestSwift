@@ -14,7 +14,7 @@ protocol PBTestOneViewDelegate : NSObjectProtocol {
     @objc optional func testOneView(_ testOneView : PBTestOneView, sinceId : Int, status : Int)
 }
 
-//xib
+// xib
 class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
     
 //    //刷新
@@ -27,15 +27,15 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
-    //待研究下
+    // 待研究下
     weak var delegate : PBTestOneViewDelegate?
     
-    //调用无限次
+    // 调用无限次
     class func testOneView() -> PBTestOneView {
         return Bundle.main.loadNibNamed("PBTestOneView", owner: nil, options: nil)!.last as! PBTestOneView
     }
     
-    //加载视图(使用xib) 调用有限次,至多满屏次
+    // 加载视图(使用xib) 调用有限次,至多满屏次
     override func awakeFromNib() {
         self.tableView.frame = CGRect(x: 0, y: 0, width: sWidth, height: sHeight)
         self.tableView.delegate = self
@@ -43,7 +43,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.tableView.separatorStyle = .none
         self.tableView.backgroundColor = UIColor(red: 244.0/255, green: 244.0/255, blue: 244.0/255, alpha: 1)
         
-        //开始刷新
+        // 开始刷新
         weak var weakSelf = self;
         let header = MJRefreshNormalHeader { () -> Void in
             weakSelf!.delegate!.testOneView!(weakSelf!, sinceId: 0, status: 0)
@@ -57,18 +57,18 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
         })
     }
     
-    //属性传值,相当于oc中的重写setter方法 调用无限次
+    // 属性传值,相当于oc中的重写setter方法 调用无限次
     var testOne : PBTestOne? {
         willSet {
             
         }
         
-        //set(默认执行 中间的set方法用来 保存成私有成员变量,同时增加一个强指针)
+        // set(默认执行 中间的set方法用来 保存成私有成员变量,同时增加一个强指针)
         
         didSet {
             self.tableView.reloadData()
             
-            //结束刷新
+            // 结束刷新
             self.tableView.header.endRefreshing()
             if self.testOne!.dataModel!.dynamicAddIsNull == true {
                 self.tableView.footer.noticeNoMoreData()
@@ -78,7 +78,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    //tableView的数据源方法和代理方法
+    // tableView的数据源方法和代理方法
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }

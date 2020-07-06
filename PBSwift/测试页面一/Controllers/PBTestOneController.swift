@@ -44,7 +44,7 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
 
         weak var weakSelf = self
         let manager : AFHTTPRequestOperationManager = AFHTTPRequestOperationManager()
-        //将返回的json字典序列化为二进制数据
+        // 将返回的json字典序列化为二进制数据
         manager.responseSerializer = AFHTTPResponseSerializer()
         manager.post(requestUrl, parameters: parasTwo, success: { (operation:AFHTTPRequestOperation?, responseObject:Any?) in
             let jsonDict : [String : AnyObject] = try! JSONSerialization.jsonObject(with: (responseObject as! NSData) as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String : AnyObject]
