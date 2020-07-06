@@ -91,7 +91,7 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         
         // 字符串先转化为二进制数据作为中转
         let data : Data = jsonStr.data(using: 4)!
-//        let data : NSData = jsonStr.dataUsingEncoding(NSUTF8StringEncoding)!
+        //let data : NSData = jsonStr.dataUsingEncoding(NSUTF8StringEncoding)!
         
         // 2.序列化为 json字典
         let jsonDict : [String : AnyObject] = try! JSONSerialization.jsonObject(with: (data as! NSData) as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String : AnyObject]
