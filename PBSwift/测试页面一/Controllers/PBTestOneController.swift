@@ -94,7 +94,7 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         //let data : NSData = jsonStr.dataUsingEncoding(NSUTF8StringEncoding)!
         
         // 2.序列化为 json字典
-        let jsonDict : [String : AnyObject] = try! JSONSerialization.jsonObject(with: (data as! NSData) as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String : AnyObject]
+        let jsonDict : [String : AnyObject] = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String : AnyObject]
         
         // 封装模型(把字典封装成模型)
         let testOne = PBTestOne.testOne(jsonDict)
