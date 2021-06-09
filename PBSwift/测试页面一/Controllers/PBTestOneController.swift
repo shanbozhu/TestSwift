@@ -13,18 +13,9 @@ let sHeight : CGFloat = UIScreen.main.bounds.size.height;
 
 // 完善类的过程
 class PBTestOneController: UIViewController, PBTestOneViewDelegate {
-
-    weak var testOneView : PBTestOneView?
+    weak var testOneView: PBTestOneView?
     
-    func requestData(_ sinceId : Int, status : Int) {
-        // 等待视图
-        let loadingView = UIButton(type: .custom)
-        self.view.addSubview(loadingView)
-        loadingView.frame = CGRect(x: (sWidth-100)/2, y: (sHeight-100)/2, width: 100, height: 100)
-        loadingView.setTitle("正在加载...", for: UIControlState())
-        loadingView.backgroundColor = UIColor.gray
-        loadingView.isHidden = false
-        
+    func requestData(_ sinceId: Int, status: Int) {
         print("\(sinceId)")
 
         // 最开始要能把从网络下载的原始 json字符串 序列化为 json字典
@@ -74,9 +65,6 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
                 }
             }
             weakSelf!.testOneView!.isHidden = false
-            
-            loadingView.removeFromSuperview()
-            loadingView.isHidden = true
         }) { (operation :AFHTTPRequestOperation?, error:Error?) in
             print(error!)
         }
@@ -101,26 +89,21 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         self.testOneView!.testOne = testOne
         
         self.testOneView!.isHidden = false
-        loadingView.isHidden = true
     }
     
-    // 控制器的默认视图加载完毕之后会调用此方法
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 加载视图(把视图加载到控制器)
-        //let testOneView : PBTestOneView = PBTestOneView(frame : CGRectZero);
-        //let testOneView : PBTestOneView = PBTestOneView.init(frame: CGRectZero);
-        let testOneView : PBTestOneView = PBTestOneView.testOneView();
-        self.testOneView = testOneView;
-        self.view.addSubview(testOneView);
-        testOneView.frame = self.view.bounds;
-        testOneView.backgroundColor = UIColor.white;
+        // 把视图加载到控制器
+        let testOneView: PBTestOneView = PBTestOneView.testOneView()
+        self.testOneView = testOneView
+        self.view.addSubview(testOneView)
+        testOneView.frame = self.view.bounds
+        testOneView.backgroundColor = UIColor.white
         testOneView.isHidden = true
-        
         testOneView.delegate = self
         
-        // 填充视图(把模型填充到视图)
+        // 把模型填充到视图
         self.requestData(0, status: 0)
     }
 
