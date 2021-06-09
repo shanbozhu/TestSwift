@@ -9,16 +9,15 @@
 import UIKit
 
 class PBTestOneCell: UITableViewCell {
-    weak var oneLab : TTTAttributedLabel?
-    weak var twoLab : TTTAttributedLabel?
-    weak var oneImageView : UIImageView?
-    weak var twoImageView : UIImageView?
-    weak var oneView : UIView?
+    weak var oneLab: TTTAttributedLabel?
+    weak var twoLab: TTTAttributedLabel?
+    weak var oneImageView: UIImageView?
+    weak var twoImageView: UIImageView?
+    weak var oneView: UIView?
     
-    class func testOneCell(_ tableView : UITableView) -> PBTestOneCell {
+    class func testOneCell(_ tableView: UITableView) -> PBTestOneCell {
         tableView.register(PBTestOneCell.self, forCellReuseIdentifier: "PBTestOneCell")
-        //tableView.registerClass(self.classForCoder(), forCellReuseIdentifier: "PBTestOneCell")
-        let cell : PBTestOneCell = tableView.dequeueReusableCell(withIdentifier: "PBTestOneCell") as! PBTestOneCell
+        let cell: PBTestOneCell = tableView.dequeueReusableCell(withIdentifier: "PBTestOneCell") as! PBTestOneCell
         return cell
     }
     
@@ -26,36 +25,36 @@ class PBTestOneCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         // 图标
-        let oneImageView : UIImageView = UIImageView.init();
-        self.oneImageView = oneImageView;
-        self.contentView.addSubview(oneImageView);
+        let oneImageView: UIImageView = UIImageView.init()
+        self.oneImageView = oneImageView
+        self.contentView.addSubview(oneImageView)
         
         // 昵称
-        let oneLab : TTTAttributedLabel = TTTAttributedLabel(frame: CGRect.zero);
-        self.oneLab = oneLab;
-        self.contentView.addSubview(oneLab);
+        let oneLab: TTTAttributedLabel = TTTAttributedLabel(frame: CGRect.zero)
+        self.oneLab = oneLab
+        self.contentView.addSubview(oneLab)
         
         // 内容
-        let twoLab : TTTAttributedLabel = TTTAttributedLabel(frame: CGRect.zero)
+        let twoLab: TTTAttributedLabel = TTTAttributedLabel(frame: CGRect.zero)
         self.twoLab = twoLab
-        self.contentView.addSubview(twoLab);
+        self.contentView.addSubview(twoLab)
         
         // 图片
-        let twoImageView : UIImageView = UIImageView()
+        let twoImageView: UIImageView = UIImageView()
         self.twoImageView = twoImageView
         self.contentView.addSubview(twoImageView)
         
         // 分割线
-        let oneView : UIView = UIView()
+        let oneView: UIView = UIView()
         self.oneView = oneView
-        self.contentView.addSubview(oneView);
+        self.contentView.addSubview(oneView)
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    var testOneDataDynamic : PBTestOneDataDynamic? {
+    var testOneDataDynamic: PBTestOneDataDynamic? {
         willSet {
             
         }
