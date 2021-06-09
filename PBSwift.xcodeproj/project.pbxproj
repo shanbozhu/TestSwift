@@ -73,7 +73,6 @@
 		B0110F081EA86AF300732D0C /* PBTestOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110F001EA86AF300732D0C /* PBTestOneView.swift */; };
 		B0110F091EA86AF300732D0C /* PBTestOneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0110F011EA86AF300732D0C /* PBTestOneView.xib */; };
 		B0110F101EA86B0500732D0C /* PBTestTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110F0C1EA86B0500732D0C /* PBTestTwoController.swift */; };
-		B0110F111EA86B0500732D0C /* PBTestTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110F0F1EA86B0500732D0C /* PBTestTwoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,7 +219,6 @@
 		B0110F001EA86AF300732D0C /* PBTestOneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneView.swift; sourceTree = "<group>"; };
 		B0110F011EA86AF300732D0C /* PBTestOneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBTestOneView.xib; sourceTree = "<group>"; };
 		B0110F0C1EA86B0500732D0C /* PBTestTwoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestTwoController.swift; sourceTree = "<group>"; };
-		B0110F0F1EA86B0500732D0C /* PBTestTwoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestTwoView.swift; sourceTree = "<group>"; };
 		B0A150881EA900AE003DC8C5 /* PBBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBBridgingHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -562,7 +560,6 @@
 			isa = PBXGroup;
 			children = (
 				B0110F0B1EA86B0500732D0C /* Controllers */,
-				B0110F0E1EA86B0500732D0C /* Views */,
 			);
 			path = "测试页面二";
 			sourceTree = "<group>";
@@ -573,14 +570,6 @@
 				B0110F0C1EA86B0500732D0C /* PBTestTwoController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		B0110F0E1EA86B0500732D0C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B0110F0F1EA86B0500732D0C /* PBTestTwoView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -783,7 +772,6 @@
 				B0110EC41EA86ACD00732D0C /* AFNetworkReachabilityManager.m in Sources */,
 				B0110E471EA86AAC00732D0C /* PBTabBarController.swift in Sources */,
 				B0110ECB1EA86ACD00732D0C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				B0110F111EA86B0500732D0C /* PBTestTwoView.swift in Sources */,
 				B0110EE81EA86ACD00732D0C /* SDWebImageCompat.m in Sources */,
 				B0110EE71EA86ACD00732D0C /* SDImageCache.m in Sources */,
 			);
