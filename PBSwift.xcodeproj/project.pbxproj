@@ -561,7 +561,6 @@
 		B0110F0A1EA86B0500732D0C /* 测试页面二 */ = {
 			isa = PBXGroup;
 			children = (
-				B0FC69821FD4EF3D00EBEF64 /* Models */,
 				B0110F0B1EA86B0500732D0C /* Controllers */,
 				B0110F0E1EA86B0500732D0C /* Views */,
 			);
@@ -582,13 +581,6 @@
 				B0110F0F1EA86B0500732D0C /* PBTestTwoView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		B0FC69821FD4EF3D00EBEF64 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
