@@ -10,17 +10,17 @@ import UIKit
 
 class PBTestOneDataArtistList: NSObject {
 
-    var artistId : Int = 0
-    var name : String?
+    var artistId: Int = 0
+    var name: String?
     
-    class func testOneDataArtistList(_ dict : [String : AnyObject]) -> PBTestOneDataArtistList {
-        return PBTestOneDataArtistList(dict : dict);
+    class func testOneDataArtistList(_ dict: [String : AnyObject]) -> PBTestOneDataArtistList {
+        return PBTestOneDataArtistList(dict: dict)
     }
     
-    init(dict : [String : AnyObject]) {
+    init(dict: [String : AnyObject]) {
         super.init()
         
-        self.setValuesForKeys(dict);
+        self.setValuesForKeys(dict)
     }
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {

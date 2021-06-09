@@ -10,15 +10,15 @@ import UIKit
 
 class PBTestOneData: NSObject {
     
-    var dynamic : [AnyObject]? // arr
-    var artistList : [AnyObject]? // arr
-    var dynamicAddIsNull : Bool = false
+    var dynamic: [AnyObject]? // arr
+    var artistList: [AnyObject]? // arr
+    var dynamicAddIsNull: Bool = false
     
-    class func testOneData(_ dict : [String : AnyObject]) -> PBTestOneData {
-        return PBTestOneData(dict : dict);
+    class func testOneData(_ dict: [String : AnyObject]) -> PBTestOneData {
+        return PBTestOneData(dict: dict);
     }
     
-    init(dict : [String : AnyObject]) {
+    init(dict: [String : AnyObject]) {
         super.init()
         
         // 所有键全部赋值
