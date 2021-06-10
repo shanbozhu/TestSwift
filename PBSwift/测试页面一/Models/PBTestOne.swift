@@ -17,8 +17,8 @@ class PBTestOne: NSObject {
     var data: [AnyObject]? // arr
     var has_more: Int?
     var queryid: String?
-    var extModel: PBTestOneExt?
     
+    var extModel: PBTestOneExt?
     var dynamicAddIsNull: Bool = false
     
     class func testOne(_ dict: [String : AnyObject]) -> PBTestOne {
