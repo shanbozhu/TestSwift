@@ -18,7 +18,7 @@ class PBTestOneData: NSObject {
     var www_url: String?
     
     var img2: [String]?
-    var sortTime: Int = 10000
+    var sortTime: Int = 0
     var cellHeight: CGFloat = 0
     
     class func testOneData(_ dict: [String : AnyObject]) -> PBTestOneData {

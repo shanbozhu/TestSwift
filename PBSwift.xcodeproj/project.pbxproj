@@ -68,8 +68,6 @@
 		B0110F021EA86AF300732D0C /* PBTestOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110EF81EA86AF200732D0C /* PBTestOneController.swift */; };
 		B0110F031EA86AF300732D0C /* PBTestOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110EFA1EA86AF300732D0C /* PBTestOne.swift */; };
 		B0110F041EA86AF300732D0C /* PBTestOneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110EFB1EA86AF300732D0C /* PBTestOneData.swift */; };
-		B0110F051EA86AF300732D0C /* PBTestOneDataArtistList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110EFC1EA86AF300732D0C /* PBTestOneDataArtistList.swift */; };
-		B0110F061EA86AF300732D0C /* PBTestOneDataDynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110EFD1EA86AF300732D0C /* PBTestOneDataDynamic.swift */; };
 		B0110F071EA86AF300732D0C /* PBTestOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110EFF1EA86AF300732D0C /* PBTestOneCell.swift */; };
 		B0110F081EA86AF300732D0C /* PBTestOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110F001EA86AF300732D0C /* PBTestOneView.swift */; };
 		B0110F091EA86AF300732D0C /* PBTestOneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0110F011EA86AF300732D0C /* PBTestOneView.xib */; };
@@ -215,8 +213,6 @@
 		B0110EF81EA86AF200732D0C /* PBTestOneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneController.swift; sourceTree = "<group>"; };
 		B0110EFA1EA86AF300732D0C /* PBTestOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOne.swift; sourceTree = "<group>"; };
 		B0110EFB1EA86AF300732D0C /* PBTestOneData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneData.swift; sourceTree = "<group>"; };
-		B0110EFC1EA86AF300732D0C /* PBTestOneDataArtistList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneDataArtistList.swift; sourceTree = "<group>"; };
-		B0110EFD1EA86AF300732D0C /* PBTestOneDataDynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneDataDynamic.swift; sourceTree = "<group>"; };
 		B0110EFF1EA86AF300732D0C /* PBTestOneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneCell.swift; sourceTree = "<group>"; };
 		B0110F001EA86AF300732D0C /* PBTestOneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneView.swift; sourceTree = "<group>"; };
 		B0110F011EA86AF300732D0C /* PBTestOneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBTestOneView.xib; sourceTree = "<group>"; };
@@ -543,8 +539,6 @@
 				B0110EFA1EA86AF300732D0C /* PBTestOne.swift */,
 				B0110EFB1EA86AF300732D0C /* PBTestOneData.swift */,
 				95D3489E26723ED70007A67D /* PBTestOneExt.swift */,
-				B0110EFC1EA86AF300732D0C /* PBTestOneDataArtistList.swift */,
-				B0110EFD1EA86AF300732D0C /* PBTestOneDataDynamic.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -715,7 +709,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0110F061EA86AF300732D0C /* PBTestOneDataDynamic.swift in Sources */,
 				B0110EF21EA86ACD00732D0C /* UIImageView+HighlightedWebCache.m in Sources */,
 				B0110ED31EA86ACD00732D0C /* MJRefreshBackFooter.m in Sources */,
 				B0110ED51EA86ACD00732D0C /* MJRefreshFooter.m in Sources */,
@@ -762,7 +755,6 @@
 				B0110F101EA86B0500732D0C /* PBTestTwoController.swift in Sources */,
 				B0110EEE1EA86ACD00732D0C /* UIButton+WebCache.m in Sources */,
 				B0110ED61EA86ACD00732D0C /* MJRefreshHeader.m in Sources */,
-				B0110F051EA86AF300732D0C /* PBTestOneDataArtistList.swift in Sources */,
 				B0110EED1EA86ACD00732D0C /* SDWebImagePrefetcher.m in Sources */,
 				B0110EF41EA86ACD00732D0C /* UIView+WebCacheOperation.m in Sources */,
 				B0110ED11EA86ACD00732D0C /* UIWebView+AFNetworking.m in Sources */,

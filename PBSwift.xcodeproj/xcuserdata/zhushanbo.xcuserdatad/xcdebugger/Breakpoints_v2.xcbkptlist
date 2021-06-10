@@ -26,26 +26,10 @@
             filePath = "PBSwift/&#x6d4b;&#x8bd5;&#x9875;&#x9762;&#x4e00;/Controllers/PBTestOneController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "testOneView(_:sinceId:status:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C82309A3-45C5-4E10-A07A-58D9EC9D6051"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PBSwift/&#x6d4b;&#x8bd5;&#x9875;&#x9762;&#x4e00;/Controllers/PBTestOneController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "requestData(_:status:)"
-            landmarkType = "7">
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "PBTestOneController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,8 +42,8 @@
             filePath = "PBSwift/&#x6d4b;&#x8bd5;&#x9875;&#x9762;&#x4e00;/Controllers/PBTestOneController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "requestData(_:status:)"
             landmarkType = "7">
          </BreakpointContent>

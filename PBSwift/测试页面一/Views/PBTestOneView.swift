@@ -39,6 +39,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
         
         self.tableView.footer = MJRefreshAutoNormalFooter(refreshingBlock: { () -> Void in
             let testOneData: PBTestOneData = weakSelf!.testOne!.data!.last as! PBTestOneData
+            testOneData.sortTime = 1000
             weakSelf!.delegate!.testOneView!(weakSelf!, sinceId: testOneData.sortTime, status: 1)
         })
     }
