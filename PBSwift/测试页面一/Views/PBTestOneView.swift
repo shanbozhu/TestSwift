@@ -9,9 +9,9 @@
 import UIKit
 
 @objc
-protocol PBTestOneViewDelegate : NSObjectProtocol {
-    @objc optional func testOneView(_ testOneView : PBTestOneView)
-    @objc optional func testOneView(_ testOneView : PBTestOneView, sinceId : Int, status : Int)
+protocol PBTestOneViewDelegate: NSObjectProtocol {
+    @objc optional func testOneView(_ testOneView: PBTestOneView)
+    @objc optional func testOneView(_ testOneView: PBTestOneView, sinceId: Int, status: Int)
 }
 
 // xib
