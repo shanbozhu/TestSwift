@@ -55,7 +55,9 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
             print(error!)
         }
         
-        self.requestDataFromLoacl()
+        if status == 0 {
+            self.requestDataFromLoacl()
+        }
     }
     
     override func viewDidLoad() {
