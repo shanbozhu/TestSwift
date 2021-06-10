@@ -8,6 +8,7 @@
 
 import UIKit
 
+@objcMembers
 class PBTestOneDataArtistList: NSObject {
     var artistId: Int = 0
     var name: String?

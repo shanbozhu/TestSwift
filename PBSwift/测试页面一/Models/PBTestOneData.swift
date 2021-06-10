@@ -8,6 +8,7 @@
 
 import UIKit
 
+@objcMembers
 class PBTestOneData: NSObject {
     var dynamic: [AnyObject]? // arr
     var artistList: [AnyObject]? // arr

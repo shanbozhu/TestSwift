@@ -8,6 +8,7 @@
 
 import UIKit
 
+@objcMembers
 class PBTestOne: NSObject {
     var data: [String : AnyObject]? // dict
     var code: Int = 0

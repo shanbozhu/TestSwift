@@ -8,6 +8,7 @@
 
 import UIKit
 
+@objcMembers
 class PBTestOneDataDynamic: NSObject {
     var content: String?
     var title: String?
@@ -25,7 +26,6 @@ class PBTestOneDataDynamic: NSObject {
         // 所有键全部赋值
         self.setValuesForKeys(dict)
         
-        // 手动写死图片地址
         img2 = ["http://imgsrc.baidu.com/baike/pic/item/3bf33a87e950352a344d78d55643fbf2b2118b3b.jpg"]
     }
     
