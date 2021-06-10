@@ -14,7 +14,7 @@ class PBTestTwoController: UIViewController {
         self.view.addSubview(btn)
         btn.frame = CGRect(x: 100, y: 200, width: 100, height: 100);
         btn.backgroundColor = UIColor.red
-        btn.setTitle("点我跳转", for: UIControlState())
+        btn.setTitle("点我跳转", for: UIControl.State())
         btn.addTarget(self, action: #selector(btnClick(_:)), for: .touchUpInside)
     }
     
