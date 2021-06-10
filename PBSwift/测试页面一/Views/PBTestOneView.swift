@@ -14,28 +14,14 @@ protocol PBTestOneViewDelegate: NSObjectProtocol {
     @objc optional func testOneView(_ testOneView: PBTestOneView, sinceId: Int, status: Int)
 }
 
-// xib
 class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
-    
-//    //刷新
-//    enum RefreshStatus {
-//        RefreshStatusHeader,
-//        RefreshStatusFooter,
-//        RefreshStatusNor
-//    };
-//    typedef enum RefreshStatus RefreshStatus;
-    
     @IBOutlet weak var tableView: UITableView!
-    
-    // 待研究下
     weak var delegate : PBTestOneViewDelegate?
     
-    // 调用无限次
     class func testOneView() -> PBTestOneView {
         return Bundle.main.loadNibNamed("PBTestOneView", owner: nil, options: nil)!.last as! PBTestOneView
     }
     
-    // 加载视图(使用xib) 调用有限次,至多满屏次
     override func awakeFromNib() {
         self.tableView.frame = CGRect(x: 0, y: 0, width: sWidth, height: sHeight)
         self.tableView.delegate = self
@@ -57,8 +43,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
         })
     }
     
-    // 属性传值,相当于oc中的重写setter方法 调用无限次
-    var testOne : PBTestOne? {
+    var testOne: PBTestOne? {
         willSet {
             
         }
@@ -78,22 +63,20 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    // tableView的数据源方法和代理方法
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        
         if let testOne = self.testOne {
             return testOne.dataModel!.dynamic!.count
         } else {
-            return 0;
+            return 0
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let dynamic : PBTestOneDataDynamic = self.testOne!.dataModel!.dynamic![indexPath.row] as! PBTestOneDataDynamic
+        let dynamic: PBTestOneDataDynamic = self.testOne!.dataModel!.dynamic![indexPath.row] as! PBTestOneDataDynamic
         if dynamic.cellHeight == 0 {
             let cell = self.tableView(self.tableView, cellForRowAt: indexPath)
             cell.removeFromSuperview()
@@ -103,21 +86,15 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell : PBTestOneCell = PBTestOneCell.testOneCell(tableView);
-        
-        //cell.testOneDataDynamic = self.testOne!.dataModel!.dynamic![indexPath.row] as? PBTestOneDataDynamic
-        
-        let dynamic : PBTestOneDataDynamic = self.testOne!.dataModel!.dynamic![indexPath.row] as! PBTestOneDataDynamic
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: PBTestOneCell = PBTestOneCell.testOneCell(tableView)
+        let dynamic: PBTestOneDataDynamic = self.testOne!.dataModel!.dynamic![indexPath.row] as! PBTestOneDataDynamic
         cell.testOneDataDynamic = dynamic
-        
-        //cell.testOneDataDynamic = (self.testOne!.dataModel!.dynamic![indexPath.row] as! PBTestOneDataDynamic)
-        
         return cell;
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView .deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
         self.delegate!.testOneView!(self)
     }
     

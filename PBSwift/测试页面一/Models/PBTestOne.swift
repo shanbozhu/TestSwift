@@ -9,7 +9,6 @@
 import UIKit
 
 class PBTestOne: NSObject {
-    
     var data: [String : AnyObject]? // dict
     var code: Int = 0
     var dataModel: PBTestOneData?

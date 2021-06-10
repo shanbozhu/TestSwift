@@ -9,7 +9,6 @@
 import UIKit
 
 class PBTestOneData: NSObject {
-    
     var dynamic: [AnyObject]? // arr
     var artistList: [AnyObject]? // arr
     var dynamicAddIsNull: Bool = false
