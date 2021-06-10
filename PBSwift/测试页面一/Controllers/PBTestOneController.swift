@@ -19,8 +19,6 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
 
         let requestUrl = "https://m.baidu.com/recsys/hisproxy/data/usrhistory?page=0"
 
-
-        
         let manager: AFHTTPRequestOperationManager = AFHTTPRequestOperationManager()
         manager.requestSerializer = AFHTTPRequestSerializer()
         manager.responseSerializer = AFHTTPResponseSerializer()
