@@ -10,19 +10,9 @@ import UIKit
 
 class PBTestOneDataDynamic: NSObject {
     var content: String?
-    var isSupport: Int = 0
-    var type: Int = 0
     var title: String?
-    var sourceId: Int = 0
     var sortTime: Int = 0
-    var dynamicTime: Int = 0
-    var favorCount: Int = 0
-    var socialType: Int = 0
-    var statusId: Int = 0
-    var artId: Int = 0
     var img2: [String]?
-    var replyCount: Int = 0
-    var maitianId: Int = 0
     var cellHeight: CGFloat = 0
     
     class func testOneDataDynamic(_ dict: [String : AnyObject]) -> PBTestOneDataDynamic {

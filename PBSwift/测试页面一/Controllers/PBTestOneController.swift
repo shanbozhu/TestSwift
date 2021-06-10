@@ -11,7 +11,6 @@ import UIKit
 let sWidth : CGFloat = UIScreen.main.bounds.size.width;
 let sHeight : CGFloat = UIScreen.main.bounds.size.height;
 
-// 完善类的过程
 class PBTestOneController: UIViewController, PBTestOneViewDelegate {
     weak var testOneView: PBTestOneView?
     
@@ -74,10 +73,10 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         let data: Data = jsonStr.data(using: String.Encoding(rawValue: 4))!
         let jsonDict: [String : AnyObject] = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String : AnyObject]
         
-        // 把字典封装成模型
+        // 2.把字典封装成模型
         let testOne = PBTestOne.testOne(jsonDict)
         
-        // 把模型加载到控制器
+        // 3.把模型填充到视图
         self.testOneView!.testOne = testOne
         self.testOneView!.isHidden = false
     }
@@ -85,7 +84,7 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 把视图加载到控制器
+        // 1.把视图加载到控制器
         let testOneView: PBTestOneView = PBTestOneView.testOneView()
         self.testOneView = testOneView
         self.view.addSubview(testOneView)
@@ -94,7 +93,6 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         testOneView.isHidden = true
         testOneView.delegate = self
         
-        // 把模型填充到视图
         self.requestData(0, status: 0)
     }
 
