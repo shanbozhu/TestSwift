@@ -54,7 +54,7 @@ class PBTestOneCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    var testOneDataDynamic: PBTestOneDataDynamic? {
+    var testOneData: PBTestOneData? {
         willSet {
             
         }
@@ -78,26 +78,25 @@ class PBTestOneCell: UITableViewCell {
         self.oneLab!.numberOfLines = 2
         self.oneLab!.font = UIFont.boldSystemFont(ofSize: 15)
         self.oneLab!.frame = CGRect(x: 68, y: 12, width: sWidth-68-20, height: 0)
-        self.oneLab!.text = self.testOneDataDynamic!.title
+        self.oneLab!.text = self.testOneData!.query
         self.oneLab!.sizeToFit()
         //self.oneLab!.backgroundColor = UIColor.grayColor()
         
         // 内容
         self.twoLab!.textColor = UIColor(white: 0, alpha: 1)
-        //self.twoLab!.lineSpacing = 5
         self.twoLab!.numberOfLines = 0
         self.twoLab!.font = UIFont.systemFont(ofSize: 16)
         self.twoLab!.frame = CGRect(x: 68, y: (self.oneLab!.frame).maxY+10, width: sWidth-68-20, height: 0)
-        self.twoLab!.text = self.testOneDataDynamic!.content
+        self.twoLab!.text = self.testOneData!.word
         self.twoLab!.sizeToFit()
         
         // 图片
         self.twoImageView!.contentMode = .scaleAspectFill
         self.twoImageView!.clipsToBounds = true
         self.twoImageView!.backgroundColor = UIColor.blue
-        if self.testOneDataDynamic!.img2!.count > 0 {
+        if self.testOneData!.img2!.count > 0 {
             self.twoImageView!.frame = CGRect(x: 68, y: (self.twoLab!.frame).maxY+10, width: 120, height: 120)
-            self.twoImageView!.sd_setImage(with: URL(string: self.testOneDataDynamic!.img2![0]), placeholderImage: UIImage(named: "zhanwei"))
+            self.twoImageView!.sd_setImage(with: URL(string: self.testOneData!.img2![0]), placeholderImage: UIImage(named: "zhanwei"))
             self.twoImageView!.isHidden = false
         } else {
             self.twoImageView!.frame = CGRect(x: 68, y: (self.twoLab!.frame).maxY, width: 0, height: 0)
@@ -112,7 +111,7 @@ class PBTestOneCell: UITableViewCell {
         var rect : CGRect = self.frame
         rect.size.height = self.oneView!.frame.maxY
         self.frame = rect
-        self.testOneDataDynamic!.cellHeight = self.frame.size.height
+        self.testOneData!.cellHeight = self.frame.size.height
     }
     
     deinit {

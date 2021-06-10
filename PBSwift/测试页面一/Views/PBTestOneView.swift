@@ -16,7 +16,7 @@ protocol PBTestOneViewDelegate: NSObjectProtocol {
 
 class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
-    weak var delegate : PBTestOneViewDelegate?
+    weak var delegate: PBTestOneViewDelegate?
     
     class func testOneView() -> PBTestOneView {
         return Bundle.main.loadNibNamed("PBTestOneView", owner: nil, options: nil)!.last as! PBTestOneView
@@ -38,8 +38,8 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.tableView.header = header
         
         self.tableView.footer = MJRefreshAutoNormalFooter(refreshingBlock: { () -> Void in
-            let dynamic : PBTestOneDataDynamic = weakSelf!.testOne!.dataModel!.dynamic!.last as! PBTestOneDataDynamic
-            weakSelf!.delegate!.testOneView!(weakSelf!, sinceId: dynamic.sortTime, status: 1)
+//            let dynamic: PBTestOneData = weakSelf!.testOne!.data!.last as! PBTestOneData
+//            weakSelf!.delegate!.testOneView!(weakSelf!, sinceId: dynamic.sortTime, status: 1)
         })
     }
     
@@ -55,7 +55,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
             
             // 结束刷新
             self.tableView.header.endRefreshing()
-            if self.testOne!.dataModel!.dynamicAddIsNull == true {
+            if self.testOne!.dynamicAddIsNull == true {
                 self.tableView.footer.noticeNoMoreData()
             } else {
                 self.tableView.footer.endRefreshing()
@@ -69,27 +69,27 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         if let testOne = self.testOne {
-            return testOne.dataModel!.dynamic!.count
+            return testOne.data!.count
         } else {
             return 0
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let dynamic: PBTestOneDataDynamic = self.testOne!.dataModel!.dynamic![indexPath.row] as! PBTestOneDataDynamic
-        if dynamic.cellHeight == 0 {
+        let testOneData: PBTestOneData = self.testOne!.data![indexPath.row] as! PBTestOneData
+        if testOneData.cellHeight == 0 {
             let cell = self.tableView(self.tableView, cellForRowAt: indexPath)
             cell.removeFromSuperview()
             return cell.frame.height
         } else {
-            return dynamic.cellHeight
+            return testOneData.cellHeight
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PBTestOneCell = PBTestOneCell.testOneCell(tableView)
-        let dynamic: PBTestOneDataDynamic = self.testOne!.dataModel!.dynamic![indexPath.row] as! PBTestOneDataDynamic
-        cell.testOneDataDynamic = dynamic
+        let testOneData: PBTestOneData = self.testOne!.data![indexPath.row] as! PBTestOneData
+        cell.testOneData = testOneData
         return cell;
     }
     

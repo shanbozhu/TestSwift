@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95D3489F26723ED70007A67D /* PBTestOneExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3489E26723ED70007A67D /* PBTestOneExt.swift */; };
 		B0110E411EA86A4900732D0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110E3C1EA86A4900732D0C /* AppDelegate.swift */; };
 		B0110E421EA86A4900732D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0110E3E1EA86A4900732D0C /* Assets.xcassets */; };
 		B0110E431EA86A4900732D0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0110E3F1EA86A4900732D0C /* LaunchScreen.storyboard */; };
@@ -93,6 +94,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		95D3489E26723ED70007A67D /* PBTestOneExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBTestOneExt.swift; sourceTree = "<group>"; };
 		B0110E081EA8696F00732D0C /* PBSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PBSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0110E171EA8696F00732D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0110E1C1EA8696F00732D0C /* PBSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PBSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -540,6 +542,7 @@
 			children = (
 				B0110EFA1EA86AF300732D0C /* PBTestOne.swift */,
 				B0110EFB1EA86AF300732D0C /* PBTestOneData.swift */,
+				95D3489E26723ED70007A67D /* PBTestOneExt.swift */,
 				B0110EFC1EA86AF300732D0C /* PBTestOneDataArtistList.swift */,
 				B0110EFD1EA86AF300732D0C /* PBTestOneDataDynamic.swift */,
 			);
@@ -763,6 +766,7 @@
 				B0110EED1EA86ACD00732D0C /* SDWebImagePrefetcher.m in Sources */,
 				B0110EF41EA86ACD00732D0C /* UIView+WebCacheOperation.m in Sources */,
 				B0110ED11EA86ACD00732D0C /* UIWebView+AFNetworking.m in Sources */,
+				95D3489F26723ED70007A67D /* PBTestOneExt.swift in Sources */,
 				B0110F071EA86AF300732D0C /* PBTestOneCell.swift in Sources */,
 				B0110EDC1EA86ACD00732D0C /* MJRefreshBackStateFooter.m in Sources */,
 				B0110EE31EA86ACD00732D0C /* UIScrollView+MJRefresh.m in Sources */,

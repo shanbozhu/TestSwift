@@ -10,9 +10,16 @@ import UIKit
 
 @objcMembers
 class PBTestOne: NSObject {
-    var data: [String : AnyObject]? // dict
-    var code: Int = 0
-    var dataModel: PBTestOneData?
+    var errno: String?
+    var errmsg: String?
+    var ext: [String : AnyObject]? // dict
+    var extend: [String : AnyObject]? // dict
+    var data: [AnyObject]? // arr
+    var has_more: Int?
+    var queryid: String?
+    var extModel: PBTestOneExt?
+    
+    var dynamicAddIsNull: Bool = false
     
     class func testOne(_ dict: [String : AnyObject]) -> PBTestOne {
         return PBTestOne(dict: dict)
@@ -25,9 +32,16 @@ class PBTestOne: NSObject {
         self.setValuesForKeys(dict)
         
         // 对赋值后的键所对应的值进行处理
-        if let data = self.data {
-            let testOneData: PBTestOneData = PBTestOneData.testOneData(data)
-            self.dataModel = testOneData
+        var objsData = [PBTestOneData]()
+        for dic in self.data! {
+            let testOneData: PBTestOneData = PBTestOneData.testOneData(dic as! [String : AnyObject])
+            objsData.append(testOneData)
+        }
+        self.data = objsData
+        
+        if let ext = self.ext {
+            let testOneExt: PBTestOneExt = PBTestOneExt.testOneExt(ext)
+            self.extModel = testOneExt
         }
     }
     

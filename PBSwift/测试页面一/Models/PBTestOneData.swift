@@ -10,12 +10,17 @@ import UIKit
 
 @objcMembers
 class PBTestOneData: NSObject {
-    var dynamic: [AnyObject]? // arr
-    var artistList: [AnyObject]? // arr
-    var dynamicAddIsNull: Bool = false
+    var ext: String?
+    var query: String?
+    var type: String?
+    var wap_url: String?
+    var word: String?
+    var www_url: String?
+    var img2: [String]?
+    var cellHeight: CGFloat = 0
     
     class func testOneData(_ dict: [String : AnyObject]) -> PBTestOneData {
-        return PBTestOneData(dict: dict);
+        return PBTestOneData(dict: dict)
     }
     
     init(dict: [String : AnyObject]) {
@@ -24,23 +29,7 @@ class PBTestOneData: NSObject {
         // 所有键全部赋值
         self.setValuesForKeys(dict)
         
-        // 对赋值后的键所对应的值进行处理
-        var objsDynamic = [PBTestOneDataDynamic]()
-        for dic in self.dynamic! {
-            let testOneDataDynamic = PBTestOneDataDynamic.testOneDataDynamic(dic as! [String : AnyObject])
-            objsDynamic.append(testOneDataDynamic)
-        }
-        self.dynamic = objsDynamic
-        
-        // 对赋值后的键所对应的值进行处理
-        var objsArtistList = [PBTestOneDataArtistList]()
-        if self.artistList != nil {
-            for dic in self.artistList! {
-                let testOneDataArtistList = PBTestOneDataArtistList.testOneDataArtistList(dic as! [String : AnyObject])
-                objsArtistList.append(testOneDataArtistList)
-            }
-            self.artistList = objsArtistList
-        }
+        self.img2 = ["http://imgsrc.baidu.com/baike/pic/item/3bf33a87e950352a344d78d55643fbf2b2118b3b.jpg"]
     }
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
