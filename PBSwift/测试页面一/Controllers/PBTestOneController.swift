@@ -55,7 +55,7 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
             print(error!)
         }
         
-        if status == 0 {
+        if status == 0 && self.testOneView?.testOne == nil {
             self.requestDataFromLoacl()
         }
     }
