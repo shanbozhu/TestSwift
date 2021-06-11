@@ -68,7 +68,6 @@
 		95D34B692673464B0007A67D /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D34B242673464B0007A67D /* UIImageView+WebCache.m */; };
 		95D34B6A2673464B0007A67D /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D34B272673464B0007A67D /* UIView+WebCacheOperation.m */; };
 		95D34B6B2673464B0007A67D /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D34B2B2673464B0007A67D /* UIButton+WebCache.m */; };
-		95D34B6C2673464B0007A67D /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D34B2F2673464B0007A67D /* TTTAttributedLabel.m */; };
 		95D34B6D2673464B0007A67D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D34B312673464B0007A67D /* LaunchScreen.storyboard */; };
 		95D34B6E2673464B0007A67D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D34B322673464B0007A67D /* Assets.xcassets */; };
 		95D34B6F2673464B0007A67D /* PBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D34B352673464B0007A67D /* PBTabBarController.swift */; };
@@ -210,8 +209,6 @@
 		95D34B2A2673464B0007A67D /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		95D34B2B2673464B0007A67D /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
 		95D34B2C2673464B0007A67D /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
-		95D34B2E2673464B0007A67D /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
-		95D34B2F2673464B0007A67D /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		95D34B312673464B0007A67D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95D34B322673464B0007A67D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95D34B342673464B0007A67D /* PBSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PBSwift-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -319,7 +316,6 @@
 				95D34AE12673464B0007A67D /* PBFoundation */,
 				95D34AE42673464B0007A67D /* AFNetworking */,
 				95D34B0B2673464B0007A67D /* SDWebImage */,
-				95D34B2D2673464B0007A67D /* TTTAttributedLabel */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -523,15 +519,6 @@
 				95D34B2C2673464B0007A67D /* UIImage+GIF.h */,
 			);
 			path = SDWebImage;
-			sourceTree = "<group>";
-		};
-		95D34B2D2673464B0007A67D /* TTTAttributedLabel */ = {
-			isa = PBXGroup;
-			children = (
-				95D34B2E2673464B0007A67D /* TTTAttributedLabel.h */,
-				95D34B2F2673464B0007A67D /* TTTAttributedLabel.m */,
-			);
-			path = TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
 		95D34B302673464B0007A67D /* Resource */ = {
@@ -783,7 +770,6 @@
 				95D34B6A2673464B0007A67D /* UIView+WebCacheOperation.m in Sources */,
 				95D34B5C2673464B0007A67D /* UIImage+WebP.m in Sources */,
 				95D34B6F2673464B0007A67D /* PBTabBarController.swift in Sources */,
-				95D34B6C2673464B0007A67D /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,6 @@
 // 头文件只编译,不链接
 
 #import "AFNetworking.h"
-#import "TTTAttributedLabel.h"
 #import "UIImageView+WebCache.h"
 #import "MJRefresh.h"
 #import "PBCommonUIParams.h"

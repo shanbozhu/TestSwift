@@ -9,8 +9,8 @@
 import UIKit
 
 class PBTestOneCell: UITableViewCell {
-    weak var oneLab: TTTAttributedLabel?
-    weak var twoLab: TTTAttributedLabel?
+    weak var oneLab: UILabel?
+    weak var twoLab: UILabel?
     weak var oneImageView: UIImageView?
     weak var twoImageView: UIImageView?
     weak var oneView: UIView?
@@ -30,12 +30,12 @@ class PBTestOneCell: UITableViewCell {
         self.contentView.addSubview(oneImageView)
         
         // 昵称
-        let oneLab: TTTAttributedLabel = TTTAttributedLabel(frame: CGRect.zero)
+        let oneLab: UILabel = UILabel(frame: CGRect.zero)
         self.oneLab = oneLab
         self.contentView.addSubview(oneLab)
         
         // 内容
-        let twoLab: TTTAttributedLabel = TTTAttributedLabel(frame: CGRect.zero)
+        let twoLab: UILabel = UILabel(frame: CGRect.zero)
         self.twoLab = twoLab
         self.contentView.addSubview(twoLab)
         
