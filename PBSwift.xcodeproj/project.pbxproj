@@ -214,7 +214,7 @@
 		95D34B2F2673464B0007A67D /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		95D34B312673464B0007A67D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95D34B322673464B0007A67D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		95D34B342673464B0007A67D /* PBBridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBBridgingHeader.h; sourceTree = "<group>"; };
+		95D34B342673464B0007A67D /* PBSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PBSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		95D34B352673464B0007A67D /* PBTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTabBarController.swift; sourceTree = "<group>"; };
 		95D34B362673464B0007A67D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0110E081EA8696F00732D0C /* PBSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PBSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -546,7 +546,7 @@
 		95D34B332673464B0007A67D /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				95D34B342673464B0007A67D /* PBBridgingHeader.h */,
+				95D34B342673464B0007A67D /* PBSwift-Bridging-Header.h */,
 				95D34B352673464B0007A67D /* PBTabBarController.swift */,
 				95D34B362673464B0007A67D /* AppDelegate.swift */,
 			);
@@ -934,7 +934,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zsb.PBSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/Others/Main/PBBridgingHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/Others/Main/PBSwift-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -952,7 +952,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zsb.PBSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/Others/Main/PBBridgingHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/Others/Main/PBSwift-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};

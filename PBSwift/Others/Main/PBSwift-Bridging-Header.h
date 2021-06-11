@@ -1,21 +1,22 @@
 //
-//  PBBridgingHeader.h
+//  PBSwift-Bridging-Header.h
 //  PBSwift
 //
 //  Created by DaMaiIOS on 2017/4/20.
 //  Copyright © 2017年 DaMaiIOS. All rights reserved.
 //
 
-#ifndef PBBridgingHeader_h
-#define PBBridgingHeader_h
+#ifndef PBSwift-Bridging-Header_h
+#define PBSwift-Bridging-Header_h
 
 // 桥接头文件,swift调用oc
-// $(SRCROOT)/$(PROJECT)/Others/Main/PBBridgingHeader.h
+// $(SRCROOT)/$(PROJECT)/Others/Main/PBSwift-Bridging-Header.h
 // 头文件只编译,不链接
+
 #import "AFNetworking.h"
 #import "TTTAttributedLabel.h"
 #import "UIImageView+WebCache.h"
 #import "MJRefresh.h"
 #import "PBCommonUIParams.h"
 
-#endif /* PBBridgingHeader_h */
+#endif /* PBSwift-Bridging-Header_h */
