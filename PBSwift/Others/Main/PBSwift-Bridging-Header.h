@@ -6,9 +6,6 @@
 //  Copyright © 2017年 DaMaiIOS. All rights reserved.
 //
 
-#ifndef PBSwift-Bridging-Header_h
-#define PBSwift-Bridging-Header_h
-
 // 桥接头文件,swift调用oc
 // $(SRCROOT)/$(PROJECT)/Others/Main/PBSwift-Bridging-Header.h
 // 头文件只编译,不链接
@@ -18,5 +15,3 @@
 #import "UIImageView+WebCache.h"
 #import "MJRefresh.h"
 #import "PBCommonUIParams.h"
-
-#endif /* PBSwift-Bridging-Header_h */
