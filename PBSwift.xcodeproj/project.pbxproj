@@ -261,8 +261,8 @@
 		95D34A9A267345AD0007A67D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				95D34A9B267345AD0007A67D /* PBTestOneData.swift */,
 				95D34A9C267345AD0007A67D /* PBTestOne.swift */,
+				95D34A9B267345AD0007A67D /* PBTestOneData.swift */,
 				95D34A9D267345AD0007A67D /* PBTestOneExt.swift */,
 			);
 			path = Models;
@@ -279,9 +279,9 @@
 		95D34AA0267345AD0007A67D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				95D34AA1267345AD0007A67D /* PBTestOneCell.swift */,
-				95D34AA2267345AD0007A67D /* PBTestOneView.xib */,
 				95D34AA3267345AD0007A67D /* PBTestOneView.swift */,
+				95D34AA2267345AD0007A67D /* PBTestOneView.xib */,
+				95D34AA1267345AD0007A67D /* PBTestOneCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
