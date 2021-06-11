@@ -56,6 +56,7 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         }
         
         if status == 0 && self.testOneView?.testOne == nil {
+            // 首次加载本地数据
             self.requestDataFromLoacl()
         }
     }
