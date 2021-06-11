@@ -23,11 +23,16 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     override func awakeFromNib() {
-        self.tableView.frame = CGRect(x: 0, y: 0, width: sWidth, height: sHeight)
+        self.tableView.frame = CGRect(x: 0, y: PBCommonUIParams.navigationBarHeight(), width: sWidth, height: sHeight - PBCommonUIParams.navigationBarHeight())
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.separatorStyle = .none
         self.tableView.backgroundColor = UIColor(red: 244.0/255, green: 244.0/255, blue: 244.0/255, alpha: 1)
+        if #available(iOS 11.0, *) {
+            self.tableView.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
+        } else {
+            // Fallback on earlier versions
+        }
         
         // 开始刷新
         weak var weakSelf = self;

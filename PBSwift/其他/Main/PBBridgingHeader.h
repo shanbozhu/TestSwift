@@ -15,5 +15,6 @@
 #import "TTTAttributedLabel.h"
 #import "UIImageView+WebCache.h"
 #import "MJRefresh.h"
+#import "PBCommonUIParams.h"
 
 #endif /* PBBridgingHeader_h */

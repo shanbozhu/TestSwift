@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		95D3489F26723ED70007A67D /* PBTestOneExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3489E26723ED70007A67D /* PBTestOneExt.swift */; };
+		95D348CE267311C10007A67D /* PBCommonUIParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D348C7267311C00007A67D /* PBCommonUIParams.m */; };
 		B0110E411EA86A4900732D0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110E3C1EA86A4900732D0C /* AppDelegate.swift */; };
 		B0110E421EA86A4900732D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0110E3E1EA86A4900732D0C /* Assets.xcassets */; };
 		B0110E431EA86A4900732D0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0110E3F1EA86A4900732D0C /* LaunchScreen.storyboard */; };
@@ -93,6 +94,8 @@
 
 /* Begin PBXFileReference section */
 		95D3489E26723ED70007A67D /* PBTestOneExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBTestOneExt.swift; sourceTree = "<group>"; };
+		95D348C1267311C00007A67D /* PBCommonUIParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCommonUIParams.h; sourceTree = "<group>"; };
+		95D348C7267311C00007A67D /* PBCommonUIParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCommonUIParams.m; sourceTree = "<group>"; };
 		B0110E081EA8696F00732D0C /* PBSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PBSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0110E171EA8696F00732D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0110E1C1EA8696F00732D0C /* PBSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PBSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,6 +248,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		95D348C0267311C00007A67D /* PBFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				95D348C1267311C00007A67D /* PBCommonUIParams.h */,
+				95D348C7267311C00007A67D /* PBCommonUIParams.m */,
+			);
+			path = PBFoundation;
+			sourceTree = "<group>";
+		};
 		B0110DFF1EA8696F00732D0C = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +299,7 @@
 		B0110E3A1EA86A4900732D0C /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				95D348C0267311C00007A67D /* PBFoundation */,
 				B0110E481EA86ACD00732D0C /* AFNetworking */,
 				B0110E6F1EA86ACD00732D0C /* MJRefresh */,
 				B0110E9C1EA86ACD00732D0C /* SDWebImage */,
@@ -747,6 +760,7 @@
 				B0110ED91EA86ACD00732D0C /* MJRefreshAutoStateFooter.m in Sources */,
 				B0110EDF1EA86ACD00732D0C /* MJRefreshStateHeader.m in Sources */,
 				B0110EF01EA86ACD00732D0C /* UIImage+MultiFormat.m in Sources */,
+				95D348CE267311C10007A67D /* PBCommonUIParams.m in Sources */,
 				B0110EE91EA86ACD00732D0C /* SDWebImageDecoder.m in Sources */,
 				B0110ECE1EA86ACD00732D0C /* UIImageView+AFNetworking.m in Sources */,
 				B0110ECD1EA86ACD00732D0C /* UIButton+AFNetworking.m in Sources */,

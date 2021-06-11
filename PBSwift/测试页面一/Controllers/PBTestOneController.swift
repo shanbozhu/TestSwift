@@ -63,6 +63,8 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.automaticallyAdjustsScrollViewInsets = false
+        
         // 1.把视图加载到控制器
         let testOneView: PBTestOneView = PBTestOneView.testOneView()
         self.testOneView = testOneView
