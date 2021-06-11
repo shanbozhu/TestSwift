@@ -10,6 +10,7 @@
 #define PBBridgingHeader_h
 
 // 桥接头文件,swift调用oc
+// $(SRCROOT)/$(PROJECT)/Others/Main/PBBridgingHeader.h
 // 头文件只编译,不链接
 #import "AFNetworking.h"
 #import "TTTAttributedLabel.h"
