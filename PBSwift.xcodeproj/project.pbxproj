@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95D3489F26723ED70007A67D /* PBTestOneExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3489E26723ED70007A67D /* PBTestOneExt.swift */; };
 		95D348CE267311C10007A67D /* PBCommonUIParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D348C7267311C00007A67D /* PBCommonUIParams.m */; };
+		95D34AA4267345AD0007A67D /* PBTestOneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D34A9B267345AD0007A67D /* PBTestOneData.swift */; };
+		95D34AA5267345AD0007A67D /* PBTestOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D34A9C267345AD0007A67D /* PBTestOne.swift */; };
+		95D34AA6267345AD0007A67D /* PBTestOneExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D34A9D267345AD0007A67D /* PBTestOneExt.swift */; };
+		95D34AA7267345AD0007A67D /* PBTestOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D34A9F267345AD0007A67D /* PBTestOneController.swift */; };
+		95D34AA8267345AD0007A67D /* PBTestOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D34AA1267345AD0007A67D /* PBTestOneCell.swift */; };
+		95D34AA9267345AD0007A67D /* PBTestOneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D34AA2267345AD0007A67D /* PBTestOneView.xib */; };
+		95D34AAA267345AD0007A67D /* PBTestOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D34AA3267345AD0007A67D /* PBTestOneView.swift */; };
+		95D34AAE267345C90007A67D /* PBTestTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D34AAD267345C90007A67D /* PBTestTwoController.swift */; };
 		B0110E411EA86A4900732D0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110E3C1EA86A4900732D0C /* AppDelegate.swift */; };
 		B0110E421EA86A4900732D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0110E3E1EA86A4900732D0C /* Assets.xcassets */; };
 		B0110E431EA86A4900732D0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0110E3F1EA86A4900732D0C /* LaunchScreen.storyboard */; };
@@ -66,13 +73,6 @@
 		B0110EF31EA86ACD00732D0C /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B0110EBB1EA86ACD00732D0C /* UIImageView+WebCache.m */; };
 		B0110EF41EA86ACD00732D0C /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0110EBD1EA86ACD00732D0C /* UIView+WebCacheOperation.m */; };
 		B0110EF51EA86ACD00732D0C /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0110EC01EA86ACD00732D0C /* TTTAttributedLabel.m */; };
-		B0110F021EA86AF300732D0C /* PBTestOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110EF81EA86AF200732D0C /* PBTestOneController.swift */; };
-		B0110F031EA86AF300732D0C /* PBTestOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110EFA1EA86AF300732D0C /* PBTestOne.swift */; };
-		B0110F041EA86AF300732D0C /* PBTestOneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110EFB1EA86AF300732D0C /* PBTestOneData.swift */; };
-		B0110F071EA86AF300732D0C /* PBTestOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110EFF1EA86AF300732D0C /* PBTestOneCell.swift */; };
-		B0110F081EA86AF300732D0C /* PBTestOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110F001EA86AF300732D0C /* PBTestOneView.swift */; };
-		B0110F091EA86AF300732D0C /* PBTestOneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0110F011EA86AF300732D0C /* PBTestOneView.xib */; };
-		B0110F101EA86B0500732D0C /* PBTestTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0110F0C1EA86B0500732D0C /* PBTestTwoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,9 +93,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		95D3489E26723ED70007A67D /* PBTestOneExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBTestOneExt.swift; sourceTree = "<group>"; };
 		95D348C1267311C00007A67D /* PBCommonUIParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCommonUIParams.h; sourceTree = "<group>"; };
 		95D348C7267311C00007A67D /* PBCommonUIParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCommonUIParams.m; sourceTree = "<group>"; };
+		95D34A9B267345AD0007A67D /* PBTestOneData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneData.swift; sourceTree = "<group>"; };
+		95D34A9C267345AD0007A67D /* PBTestOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOne.swift; sourceTree = "<group>"; };
+		95D34A9D267345AD0007A67D /* PBTestOneExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneExt.swift; sourceTree = "<group>"; };
+		95D34A9F267345AD0007A67D /* PBTestOneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneController.swift; sourceTree = "<group>"; };
+		95D34AA1267345AD0007A67D /* PBTestOneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneCell.swift; sourceTree = "<group>"; };
+		95D34AA2267345AD0007A67D /* PBTestOneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBTestOneView.xib; sourceTree = "<group>"; };
+		95D34AA3267345AD0007A67D /* PBTestOneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneView.swift; sourceTree = "<group>"; };
+		95D34AAD267345C90007A67D /* PBTestTwoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestTwoController.swift; sourceTree = "<group>"; };
 		B0110E081EA8696F00732D0C /* PBSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PBSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0110E171EA8696F00732D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0110E1C1EA8696F00732D0C /* PBSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PBSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,13 +220,6 @@
 		B0110EBD1EA86ACD00732D0C /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		B0110EBF1EA86ACD00732D0C /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		B0110EC01EA86ACD00732D0C /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
-		B0110EF81EA86AF200732D0C /* PBTestOneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneController.swift; sourceTree = "<group>"; };
-		B0110EFA1EA86AF300732D0C /* PBTestOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOne.swift; sourceTree = "<group>"; };
-		B0110EFB1EA86AF300732D0C /* PBTestOneData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneData.swift; sourceTree = "<group>"; };
-		B0110EFF1EA86AF300732D0C /* PBTestOneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneCell.swift; sourceTree = "<group>"; };
-		B0110F001EA86AF300732D0C /* PBTestOneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestOneView.swift; sourceTree = "<group>"; };
-		B0110F011EA86AF300732D0C /* PBTestOneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBTestOneView.xib; sourceTree = "<group>"; };
-		B0110F0C1EA86B0500732D0C /* PBTestTwoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTestTwoController.swift; sourceTree = "<group>"; };
 		B0A150881EA900AE003DC8C5 /* PBBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBBridgingHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,6 +257,60 @@
 			path = PBFoundation;
 			sourceTree = "<group>";
 		};
+		95D34A99267345AC0007A67D /* PageOne */ = {
+			isa = PBXGroup;
+			children = (
+				95D34A9A267345AD0007A67D /* Models */,
+				95D34A9E267345AD0007A67D /* Controllers */,
+				95D34AA0267345AD0007A67D /* Views */,
+			);
+			path = PageOne;
+			sourceTree = "<group>";
+		};
+		95D34A9A267345AD0007A67D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				95D34A9B267345AD0007A67D /* PBTestOneData.swift */,
+				95D34A9C267345AD0007A67D /* PBTestOne.swift */,
+				95D34A9D267345AD0007A67D /* PBTestOneExt.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		95D34A9E267345AD0007A67D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				95D34A9F267345AD0007A67D /* PBTestOneController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		95D34AA0267345AD0007A67D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				95D34AA1267345AD0007A67D /* PBTestOneCell.swift */,
+				95D34AA2267345AD0007A67D /* PBTestOneView.xib */,
+				95D34AA3267345AD0007A67D /* PBTestOneView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		95D34AAB267345C90007A67D /* PageTwo */ = {
+			isa = PBXGroup;
+			children = (
+				95D34AAC267345C90007A67D /* Controllers */,
+			);
+			path = PageTwo;
+			sourceTree = "<group>";
+		};
+		95D34AAC267345C90007A67D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				95D34AAD267345C90007A67D /* PBTestTwoController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		B0110DFF1EA8696F00732D0C = {
 			isa = PBXGroup;
 			children = (
@@ -278,8 +332,8 @@
 		B0110E0A1EA8696F00732D0C /* PBSwift */ = {
 			isa = PBXGroup;
 			children = (
-				B0110EF61EA86AF200732D0C /* 测试页面一 */,
-				B0110F0A1EA86B0500732D0C /* 测试页面二 */,
+				95D34AAB267345C90007A67D /* PageTwo */,
+				95D34A99267345AC0007A67D /* PageOne */,
 				B0110E391EA86A4900732D0C /* 其他 */,
 				B0110E171EA8696F00732D0C /* Info.plist */,
 			);
@@ -528,60 +582,6 @@
 			path = TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
-		B0110EF61EA86AF200732D0C /* 测试页面一 */ = {
-			isa = PBXGroup;
-			children = (
-				B0110EF71EA86AF200732D0C /* Controllers */,
-				B0110EF91EA86AF300732D0C /* Models */,
-				B0110EFE1EA86AF300732D0C /* Views */,
-			);
-			path = "测试页面一";
-			sourceTree = "<group>";
-		};
-		B0110EF71EA86AF200732D0C /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				B0110EF81EA86AF200732D0C /* PBTestOneController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		B0110EF91EA86AF300732D0C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				B0110EFA1EA86AF300732D0C /* PBTestOne.swift */,
-				B0110EFB1EA86AF300732D0C /* PBTestOneData.swift */,
-				95D3489E26723ED70007A67D /* PBTestOneExt.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		B0110EFE1EA86AF300732D0C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B0110EFF1EA86AF300732D0C /* PBTestOneCell.swift */,
-				B0110F001EA86AF300732D0C /* PBTestOneView.swift */,
-				B0110F011EA86AF300732D0C /* PBTestOneView.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		B0110F0A1EA86B0500732D0C /* 测试页面二 */ = {
-			isa = PBXGroup;
-			children = (
-				B0110F0B1EA86B0500732D0C /* Controllers */,
-			);
-			path = "测试页面二";
-			sourceTree = "<group>";
-		};
-		B0110F0B1EA86B0500732D0C /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				B0110F0C1EA86B0500732D0C /* PBTestTwoController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -695,7 +695,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0110E421EA86A4900732D0C /* Assets.xcassets in Resources */,
-				B0110F091EA86AF300732D0C /* PBTestOneView.xib in Resources */,
+				95D34AA9267345AD0007A67D /* PBTestOneView.xib in Resources */,
 				B0110E431EA86A4900732D0C /* LaunchScreen.storyboard in Resources */,
 				B0110EE01EA86ACD00732D0C /* MJRefresh.bundle in Resources */,
 			);
@@ -728,6 +728,7 @@
 				B0110EC71EA86ACD00732D0C /* AFURLRequestSerialization.m in Sources */,
 				B0110EC61EA86ACD00732D0C /* AFURLConnectionOperation.m in Sources */,
 				B0110EE11EA86ACD00732D0C /* MJRefreshConst.m in Sources */,
+				95D34AA6267345AD0007A67D /* PBTestOneExt.swift in Sources */,
 				B0110ECC1EA86ACD00732D0C /* UIAlertView+AFNetworking.m in Sources */,
 				B0110EC51EA86ACD00732D0C /* AFSecurityPolicy.m in Sources */,
 				B0110EDD1EA86ACD00732D0C /* MJRefreshGifHeader.m in Sources */,
@@ -739,13 +740,12 @@
 				B0110EF31EA86ACD00732D0C /* UIImageView+WebCache.m in Sources */,
 				B0110EDE1EA86ACD00732D0C /* MJRefreshNormalHeader.m in Sources */,
 				B0110ED41EA86ACD00732D0C /* MJRefreshComponent.m in Sources */,
-				B0110F041EA86AF300732D0C /* PBTestOneData.swift in Sources */,
+				95D34AA4267345AD0007A67D /* PBTestOneData.swift in Sources */,
 				B0110EF51EA86ACD00732D0C /* TTTAttributedLabel.m in Sources */,
 				B0110EC91EA86ACD00732D0C /* AFURLSessionManager.m in Sources */,
 				B0110EE51EA86ACD00732D0C /* MKAnnotationView+WebCache.m in Sources */,
 				B0110EE61EA86ACD00732D0C /* NSData+ImageContentType.m in Sources */,
 				B0110EC81EA86ACD00732D0C /* AFURLResponseSerialization.m in Sources */,
-				B0110F031EA86AF300732D0C /* PBTestOne.swift in Sources */,
 				B0110EE41EA86ACD00732D0C /* UIView+MJExtension.m in Sources */,
 				B0110E411EA86A4900732D0C /* AppDelegate.swift in Sources */,
 				B0110ECF1EA86ACD00732D0C /* UIProgressView+AFNetworking.m in Sources */,
@@ -753,7 +753,9 @@
 				B0110EEB1EA86ACD00732D0C /* SDWebImageDownloaderOperation.m in Sources */,
 				B0110ED21EA86ACD00732D0C /* MJRefreshAutoFooter.m in Sources */,
 				B0110ECA1EA86ACD00732D0C /* AFNetworkActivityIndicatorManager.m in Sources */,
+				95D34AA5267345AD0007A67D /* PBTestOne.swift in Sources */,
 				B0110EDB1EA86ACD00732D0C /* MJRefreshBackNormalFooter.m in Sources */,
+				95D34AA8267345AD0007A67D /* PBTestOneCell.swift in Sources */,
 				B0110EF11EA86ACD00732D0C /* UIImage+WebP.m in Sources */,
 				B0110EEA1EA86ACD00732D0C /* SDWebImageDownloader.m in Sources */,
 				B0110EC21EA86ACD00732D0C /* AFHTTPRequestOperationManager.m in Sources */,
@@ -764,26 +766,24 @@
 				B0110EE91EA86ACD00732D0C /* SDWebImageDecoder.m in Sources */,
 				B0110ECE1EA86ACD00732D0C /* UIImageView+AFNetworking.m in Sources */,
 				B0110ECD1EA86ACD00732D0C /* UIButton+AFNetworking.m in Sources */,
+				95D34AAE267345C90007A67D /* PBTestTwoController.swift in Sources */,
 				B0110ED81EA86ACD00732D0C /* MJRefreshAutoNormalFooter.m in Sources */,
+				95D34AA7267345AD0007A67D /* PBTestOneController.swift in Sources */,
 				B0110ED01EA86ACD00732D0C /* UIRefreshControl+AFNetworking.m in Sources */,
-				B0110F101EA86B0500732D0C /* PBTestTwoController.swift in Sources */,
 				B0110EEE1EA86ACD00732D0C /* UIButton+WebCache.m in Sources */,
 				B0110ED61EA86ACD00732D0C /* MJRefreshHeader.m in Sources */,
 				B0110EED1EA86ACD00732D0C /* SDWebImagePrefetcher.m in Sources */,
 				B0110EF41EA86ACD00732D0C /* UIView+WebCacheOperation.m in Sources */,
 				B0110ED11EA86ACD00732D0C /* UIWebView+AFNetworking.m in Sources */,
-				95D3489F26723ED70007A67D /* PBTestOneExt.swift in Sources */,
-				B0110F071EA86AF300732D0C /* PBTestOneCell.swift in Sources */,
 				B0110EDC1EA86ACD00732D0C /* MJRefreshBackStateFooter.m in Sources */,
 				B0110EE31EA86ACD00732D0C /* UIScrollView+MJRefresh.m in Sources */,
 				B0110EEF1EA86ACD00732D0C /* UIImage+GIF.m in Sources */,
-				B0110F021EA86AF300732D0C /* PBTestOneController.swift in Sources */,
-				B0110F081EA86AF300732D0C /* PBTestOneView.swift in Sources */,
 				B0110EC41EA86ACD00732D0C /* AFNetworkReachabilityManager.m in Sources */,
 				B0110E471EA86AAC00732D0C /* PBTabBarController.swift in Sources */,
 				B0110ECB1EA86ACD00732D0C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				B0110EE81EA86ACD00732D0C /* SDWebImageCompat.m in Sources */,
 				B0110EE71EA86ACD00732D0C /* SDImageCache.m in Sources */,
+				95D34AAA267345AD0007A67D /* PBTestOneView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
