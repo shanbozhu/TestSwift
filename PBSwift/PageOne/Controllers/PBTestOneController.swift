@@ -75,6 +75,7 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         testOneView.isHidden = true
         testOneView.delegate = self
         
+        // 2.把字典加载到控制器
         self.requestData(0, status: 0)
     }
 
@@ -102,10 +103,10 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         let data: Data = jsonStr.data(using: String.Encoding.utf8)!
         let jsonDict: [String : AnyObject] = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String : AnyObject]
         
-        // 2.把字典封装成模型
+        // 3.把字典封装成模型
         let testOne = PBTestOne.testOne(jsonDict)
         
-        // 3.把模型填充到视图
+        // 4.把模型填充到视图
         self.testOneView!.testOne = testOne
         self.testOneView!.isHidden = false
     }
