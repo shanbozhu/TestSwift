@@ -28,10 +28,10 @@ class PBTestOne: NSObject {
     init(dict: [String : AnyObject]) {
         super.init();
         
-        // 所有键全部赋值
+        // 所有键全部赋值,所有键对应的值全部赋值给与键同名的成语变量
         self.setValuesForKeys(dict)
         
-        // 对赋值后的键所对应的值进行处理
+        // 特殊处理模型对象中数据类型为数组的成员变量
         var objsData = [PBTestOneData]()
         for dic in self.data! {
             let testOneData: PBTestOneData = PBTestOneData.testOneData(dic as! [String : AnyObject])
