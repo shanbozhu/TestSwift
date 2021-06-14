@@ -108,4 +108,3 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
         print("PBTestOneView对象被释放了")
     }
 }
-
