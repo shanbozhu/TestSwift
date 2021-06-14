@@ -19,7 +19,7 @@ class PBTestOne: NSObject {
     var queryid: String?
     
     var extModel: PBTestOneExt?
-    var dynamicAddIsNull: Bool = false
+    var dataAddIsNull: Bool = false
     
     class func testOne(_ dict: [String : AnyObject]) -> PBTestOne {
         return PBTestOne(dict: dict)

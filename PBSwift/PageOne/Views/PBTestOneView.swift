@@ -61,7 +61,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
             
             // 结束刷新
             self.tableView.header.endRefreshing()
-            if self.testOne!.dynamicAddIsNull == true {
+            if self.testOne!.dataAddIsNull == true {
                 self.tableView.footer.noticeNoMoreData()
             } else {
                 self.tableView.footer.endRefreshing()

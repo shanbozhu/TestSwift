@@ -41,9 +41,9 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
                     objs += testOne.data!
                     
                     if testOne.data!.count == 0 {
-                        weakSelf!.testOneView!.testOne!.dynamicAddIsNull = true
+                        weakSelf!.testOneView!.testOne!.dataAddIsNull = true
                     } else {
-                        weakSelf!.testOneView!.testOne!.dynamicAddIsNull = false
+                        weakSelf!.testOneView!.testOne!.dataAddIsNull = false
                     }
                     weakSelf!.testOneView!.testOne!.data = objs
                     weakSelf!.testOneView!.testOne = weakSelf!.testOneView!.testOne
