@@ -16,9 +16,9 @@ class PBTestOneData: NSObject {
     var wap_url: String?
     var word: String?
     var www_url: String?
+    var sortTime: Int = 0 // 用于加载更多
     
     var img2: [String]?
-    var sortTime: Int = 0 // 用于翻页加载更多
     var cellHeight: CGFloat = 0
     
     class func testOneData(_ dict: [String : AnyObject]) -> PBTestOneData {
