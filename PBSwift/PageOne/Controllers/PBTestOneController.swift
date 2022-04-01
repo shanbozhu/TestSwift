@@ -30,10 +30,12 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
             
             //weakSelf!.stringWithDictionary(jsonDict)
             
+            // 3.把字典封装成模型
             let testOne = PBTestOne.testOne(jsonDict)
 
             if testOne.errno == "0" {
                 if status == 0 {
+                    // 4.把模型填充到视图
                     weakSelf!.testOneView!.testOne = testOne
                 } else {
                     var objs: [AnyObject] = [AnyObject]()
@@ -56,7 +58,7 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         }
         
         if status == 0 && self.testOneView?.testOne == nil {
-            // 首次加载本地数据
+            // 首次显示页面,先加载本地数据
             self.requestDataFromLoacl()
         }
     }
@@ -103,10 +105,8 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         let data: Data = jsonStr.data(using: String.Encoding.utf8)!
         let jsonDict: [String : AnyObject] = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String : AnyObject]
         
-        // 3.把字典封装成模型
         let testOne = PBTestOne.testOne(jsonDict)
         
-        // 4.把模型填充到视图
         self.testOneView!.testOne = testOne
         self.testOneView!.isHidden = false
     }
