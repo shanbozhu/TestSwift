@@ -51,12 +51,15 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     var testOne: PBTestOne? {
         willSet {
+            print(newValue, testOne)
             
         }
         
         // set(默认执行 中间的set方法用来 保存成私有成员变量,同时增加一个强指针)
         
         didSet {
+            print(oldValue, testOne)
+            
             self.tableView.reloadData()
             
             // 结束刷新
