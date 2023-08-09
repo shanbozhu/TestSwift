@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let window: UIWindow = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
-        self.window!.makeKeyAndVisible()
-        self.window!.backgroundColor = UIColor.white
+        self.window?.makeKeyAndVisible()
+        self.window?.backgroundColor = UIColor.white
         
         // tab
         let tabController: PBTabBarController = PBTabBarController()
@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nav: UINavigationController = UINavigationController(rootViewController: tabController)
         
         // rootViewController
-        self.window!.rootViewController = nav
+        self.window?.rootViewController = nav
         
         return true
     }

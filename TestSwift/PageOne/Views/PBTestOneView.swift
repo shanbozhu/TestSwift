@@ -19,7 +19,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
     weak var delegate: PBTestOneViewDelegate?
     
     class func testOneView() -> PBTestOneView {
-        return Bundle.main.loadNibNamed("PBTestOneView", owner: nil, options: nil)!.last as! PBTestOneView
+        return Bundle.main.loadNibNamed("PBTestOneView", owner: nil, options: nil)?.last as! PBTestOneView
     }
     
     override func awakeFromNib() {
@@ -37,15 +37,15 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
         // 开始刷新
         weak var weakSelf = self;
         let header = MJRefreshNormalHeader { () -> Void in
-            weakSelf!.delegate!.testOneView!(weakSelf!, sinceId: 0, status: 0)
+            weakSelf?.delegate?.testOneView!(weakSelf!, sinceId: 0, status: 0)
         }
-        header?.lastUpdatedTimeLabel!.isHidden = true
+        header?.lastUpdatedTimeLabel?.isHidden = true
         self.tableView.header = header
         
         self.tableView.footer = MJRefreshAutoNormalFooter(refreshingBlock: { () -> Void in
-            let testOneData: PBTestOneData = weakSelf!.testOne!.data!.last as! PBTestOneData
+            let testOneData: PBTestOneData = weakSelf?.testOne?.data?.last as! PBTestOneData
             testOneData.sortTime = 1000 // 提供个假值
-            weakSelf!.delegate!.testOneView!(weakSelf!, sinceId: testOneData.sortTime, status: 1)
+            weakSelf?.delegate?.testOneView!(weakSelf!, sinceId: testOneData.sortTime, status: 1)
         })
     }
     
@@ -64,7 +64,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
             
             // 结束刷新
             self.tableView.header.endRefreshing()
-            if self.testOne!.dataAddIsNull == true {
+            if self.testOne?.dataAddIsNull == true {
                 self.tableView.footer.noticeNoMoreData()
             } else {
                 self.tableView.footer.endRefreshing()
@@ -78,14 +78,14 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         if let testOne = self.testOne {
-            return testOne.data!.count
+            return testOne.data?.count ?? 0
         } else {
             return 0
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let testOneData: PBTestOneData = self.testOne!.data![indexPath.row] as! PBTestOneData
+        let testOneData: PBTestOneData = self.testOne?.data![indexPath.row] as! PBTestOneData
         if testOneData.cellHeight == 0 {
             let cell = self.tableView(self.tableView, cellForRowAt: indexPath)
             cell.removeFromSuperview()
@@ -97,14 +97,14 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PBTestOneCell = PBTestOneCell.testOneCell(tableView)
-        let testOneData: PBTestOneData = self.testOne!.data![indexPath.row] as! PBTestOneData
+        let testOneData: PBTestOneData = self.testOne?.data![indexPath.row] as! PBTestOneData
         cell.testOneData = testOneData
         return cell;
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        self.delegate!.testOneView!(self)
+        self.delegate?.testOneView!(self)
     }
     
     deinit {

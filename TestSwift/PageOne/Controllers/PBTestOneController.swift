@@ -36,23 +36,23 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
             if testOne.errno == "0" {
                 if status == 0 {
                     // 4.把模型填充到视图
-                    weakSelf!.testOneView!.testOne = testOne
+                    weakSelf?.testOneView?.testOne = testOne
                 } else {
                     var objs: [AnyObject] = [AnyObject]()
-                    objs += weakSelf!.testOneView!.testOne!.data!
+                    objs += weakSelf?.testOneView?.testOne?.data ?? []
                     objs += testOne.data!
                     
-                    if testOne.data!.count == 0 {
-                        weakSelf!.testOneView!.testOne!.dataAddIsNull = true
+                    if testOne.data?.count == 0 {
+                        weakSelf?.testOneView?.testOne?.dataAddIsNull = true
                     } else {
-                        weakSelf!.testOneView!.testOne!.dataAddIsNull = false
+                        weakSelf?.testOneView?.testOne?.dataAddIsNull = false
                     }
-                    weakSelf!.testOneView!.testOne!.data = objs
-                    weakSelf!.testOneView!.testOne = weakSelf!.testOneView!.testOne
+                    weakSelf?.testOneView?.testOne?.data = objs
+                    weakSelf?.testOneView?.testOne = weakSelf?.testOneView?.testOne
                 }
             }
             
-            weakSelf!.testOneView!.isHidden = false
+            weakSelf?.testOneView?.isHidden = false
         }) { (operation: AFHTTPRequestOperation?, error :Error?) in
             print(error!)
         }
@@ -87,7 +87,7 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         vc.hidesBottomBarWhenPushed = true
         vc.view.backgroundColor = UIColor.white
         
-        self.navigationController!.pushViewController(vc, animated:true)
+        self.navigationController?.pushViewController(vc, animated:true)
     }
     
     func testOneView(_ testOneView: PBTestOneView, sinceId: Int, status: Int) {
@@ -107,8 +107,8 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         
         let testOne = PBTestOne.testOne(jsonDict)
         
-        self.testOneView!.testOne = testOne
-        self.testOneView!.isHidden = false
+        self.testOneView?.testOne = testOne
+        self.testOneView?.isHidden = false
     }
     
     func requestHeaderAndBody(manager: AFHTTPRequestOperationManager) -> [String : String] {

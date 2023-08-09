@@ -24,6 +24,6 @@ class PBTestTwoController: UIViewController {
         testOneController.hidesBottomBarWhenPushed = true
         testOneController.view.backgroundColor = UIColor.white
         
-        self.navigationController!.pushViewController(testOneController, animated: Bool(true));
+        self.navigationController?.pushViewController(testOneController, animated: Bool(true));
     }
 }
