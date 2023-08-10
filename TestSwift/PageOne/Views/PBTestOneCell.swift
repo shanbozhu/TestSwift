@@ -17,7 +17,7 @@ class PBTestOneCell: UITableViewCell {
     
     class func testOneCell(_ tableView: UITableView) -> PBTestOneCell {
         tableView.register(PBTestOneCell.self, forCellReuseIdentifier: "PBTestOneCell")
-        let cell: PBTestOneCell = tableView.dequeueReusableCell(withIdentifier: "PBTestOneCell") as! PBTestOneCell
+        let cell: PBTestOneCell = tableView.dequeueReusableCell(withIdentifier: "PBTestOneCell") as? PBTestOneCell ?? PBTestOneCell(frame: CGRectZero)
         return cell
     }
     

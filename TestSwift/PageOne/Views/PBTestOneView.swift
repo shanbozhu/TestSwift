@@ -19,7 +19,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
     weak var delegate: PBTestOneViewDelegate?
     
     class func testOneView() -> PBTestOneView {
-        return Bundle.main.loadNibNamed("PBTestOneView", owner: nil, options: nil)?.last as! PBTestOneView
+        return Bundle.main.loadNibNamed("PBTestOneView", owner: nil, options: nil)?.last as? PBTestOneView ?? PBTestOneView()
     }
     
     override func awakeFromNib() {
@@ -43,7 +43,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.tableView.header = header
         
         self.tableView.footer = MJRefreshAutoNormalFooter(refreshingBlock: { () -> Void in
-            let testOneData: PBTestOneData = weakSelf?.testOne?.data?.last as! PBTestOneData
+            let testOneData: PBTestOneData = weakSelf?.testOne?.data?.last as? PBTestOneData ?? PBTestOneData(dict: [:])
             testOneData.sortTime = 1000 // 提供个假值
             weakSelf?.delegate?.testOneView!(weakSelf!, sinceId: testOneData.sortTime, status: 1)
         })
@@ -85,7 +85,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let testOneData: PBTestOneData = self.testOne?.data![indexPath.row] as! PBTestOneData
+        let testOneData: PBTestOneData = self.testOne?.data![indexPath.row] as? PBTestOneData ?? PBTestOneData(dict: [:])
         if testOneData.cellHeight == 0 {
             let cell = self.tableView(self.tableView, cellForRowAt: indexPath)
             cell.removeFromSuperview()
@@ -97,7 +97,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PBTestOneCell = PBTestOneCell.testOneCell(tableView)
-        let testOneData: PBTestOneData = self.testOne?.data![indexPath.row] as! PBTestOneData
+        let testOneData: PBTestOneData = self.testOne?.data![indexPath.row] as? PBTestOneData ?? PBTestOneData(dict: [:])
         cell.testOneData = testOneData
         return cell;
     }

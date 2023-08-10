@@ -26,7 +26,7 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         
         weak var weakSelf = self
         manager.post(requestUrl, parameters: paras, success: { (operation: AFHTTPRequestOperation?, responseObject: Any?) in
-            let jsonDict: [String : Any] = try! JSONSerialization.jsonObject(with: responseObject as! Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String : Any]
+            let jsonDict: [String : Any] = try! JSONSerialization.jsonObject(with: responseObject as? Data ?? Data(), options: JSONSerialization.ReadingOptions.mutableContainers) as? [String : Any] ?? [:]
             
             //weakSelf!.stringWithDictionary(jsonDict) // 页面被释放了,网络请求才回来,会崩溃
             
@@ -103,7 +103,7 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
         let jsonStr: String = "{\"ext\":{\"hot_header_title\":\"搜索发现\"},\"data\":[{\"word\":\"swift太坑\",\"ext\":\"\",\"query\":\"swift太坑\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"swift5.4\",\"ext\":\"\",\"query\":\"swift5.4\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"swift5.0\",\"ext\":\"\",\"query\":\"swift5.0\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"swift5\",\"ext\":\"\",\"query\":\"swift5\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"swift语言的优缺点\",\"ext\":\"\",\"query\":\"swift语言的优缺点\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"swift5 setValuesForKeys\",\"ext\":\"\",\"query\":\"swift5 setValuesForKeys\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"swift3 @objc inference\",\"ext\":\"\",\"query\":\"swift3 @objc inference\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"swift3 @obc\",\"ext\":\"\",\"query\":\"swift3 @obc\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"日期\",\"ext\":\"\",\"query\":\"日期\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"implicit Objective-C entrypoint\",\"ext\":\"\",\"query\":\"implicit Objective-C entrypoint\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"implicit Objective-C entrypoint -[TestSwift.PBTestOneDataDynamic setContent:]\",\"ext\":\"\",\"query\":\"implicit Objective-C entrypoint -[TestSwift.PBTestOneDataDynamic setContent:]\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"swift中?和!\",\"ext\":\"\",\"query\":\"swift中?和!\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"swift中?和!的区别\",\"ext\":\"\",\"query\":\"swift中?和!的区别\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"swift开发\",\"ext\":\"\",\"query\":\"swift开发\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"swift\",\"ext\":\"\",\"query\":\"swift\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"马克龙\",\"ext\":\"\",\"query\":\"马克龙\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"掌掴马克龙男子身份曝光\",\"ext\":\"\",\"query\":\"掌掴马克龙男子身份曝光\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"广东新增8例本土确诊病例\",\"ext\":\"\",\"query\":\"广东新增8例本土确诊病例\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"来咯哦哦嗯嗯嗯嗯嗯嗯嗯嗯嗯额额\",\"ext\":\"\",\"query\":\"来咯哦哦嗯嗯嗯嗯嗯嗯嗯嗯嗯额额\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"},{\"word\":\"来咯哦哦嗯嗯嗯嗯嗯嗯嗯嗯嗯额额。?,。。。!,。!\",\"ext\":\"\",\"query\":\"来咯哦哦嗯嗯嗯嗯嗯嗯嗯嗯嗯额额。?,。。。!,。!\",\"wap_url\":\"\",\"type\":\"2000\",\"www_url\":\"\"}],\"extend\":{\"switchinfo\":{\"status\":\"1\",\"timestamp\":\"1617359285\"}},\"errmsg\":\"\",\"errno\":\"0\",\"queryid\":\"0x870b2c49\",\"has_more\":1}"
         
         let data: Data = jsonStr.data(using: String.Encoding.utf8)!
-        let jsonDict: [String : Any] = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String : Any]
+        let jsonDict: [String : Any] = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String : Any] ?? [:]
         
         let testOne = PBTestOne.testOne(jsonDict)
         
@@ -133,7 +133,7 @@ class PBTestOneController: UIViewController, PBTestOneViewDelegate {
     func dictionaryWithString(_ jsonStr : String) -> [String : Any] {
         let data: Data = jsonStr.data(using: String.Encoding.utf8)!
         
-        let jsonDict: [String : Any] = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String : Any]
+        let jsonDict: [String : Any] = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String : Any] ?? [:]
         return jsonDict
     }
 }

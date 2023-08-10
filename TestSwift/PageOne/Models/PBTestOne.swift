@@ -34,7 +34,7 @@ class PBTestOne: NSObject {
         // 特殊处理模型对象中数据类型为数组的成员变量
         var objsData = [PBTestOneData]()
         for dic in self.data! {
-            let testOneData: PBTestOneData = PBTestOneData.testOneData(dic as! [String : Any])
+            let testOneData: PBTestOneData = PBTestOneData.testOneData(dic as? [String : Any] ?? [:])
             objsData.append(testOneData)
         }
         self.data = objsData
