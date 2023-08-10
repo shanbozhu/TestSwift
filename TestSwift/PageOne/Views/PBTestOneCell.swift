@@ -95,21 +95,21 @@ class PBTestOneCell: UITableViewCell {
         self.twoImageView?.clipsToBounds = true
         self.twoImageView?.backgroundColor = UIColor.blue
         if self.testOneData?.img2?.count ?? 0 > 0 {
-            self.twoImageView?.frame = CGRect(x: 68, y: (self.twoLab!.frame).maxY+10, width: 120, height: 120)
+            self.twoImageView?.frame = CGRect(x: 68, y: (self.twoLab?.frame.maxY ?? 0) + 10, width: 120, height: 120)
             self.twoImageView?.sd_setImage(with: URL(string: self.testOneData!.img2![0]), placeholderImage: UIImage(named: "zhanwei"))
             self.twoImageView?.isHidden = false
         } else {
-            self.twoImageView?.frame = CGRect(x: 68, y: (self.twoLab!.frame).maxY, width: 0, height: 0)
+            self.twoImageView?.frame = CGRect(x: 68, y: (self.twoLab?.frame.maxY ?? 0), width: 0, height: 0)
             self.twoImageView?.isHidden = true
         }
         
         // 分割线
-        self.oneView?.frame = CGRect(x: 0, y: self.twoImageView!.frame.maxY+10, width: sWidth, height: 0.5)
+        self.oneView?.frame = CGRect(x: 0, y: (self.twoImageView?.frame.maxY ?? 0) + 10, width: sWidth, height: 0.5)
         self.oneView?.backgroundColor = UIColor(white: 0, alpha: 0.1)
         
         // 设置自定义视图frame高度
         var rect : CGRect = self.frame
-        rect.size.height = self.oneView!.frame.maxY
+        rect.size.height = self.oneView?.frame.maxY ?? 0
         self.frame = rect
         self.testOneData?.cellHeight = self.frame.size.height
     }
