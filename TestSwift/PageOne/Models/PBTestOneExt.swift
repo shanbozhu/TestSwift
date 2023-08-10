@@ -12,11 +12,11 @@ import UIKit
 class PBTestOneExt: NSObject {
     var hot_header_title: String?
     
-    class func testOneExt(_ dict: [String : AnyObject]) -> PBTestOneExt {
+    class func testOneExt(_ dict: [String : Any]) -> PBTestOneExt {
         return PBTestOneExt(dict: dict)
     }
     
-    init(dict: [String : AnyObject]) {
+    init(dict: [String : Any]) {
         super.init()
         
         // 所有键全部赋值

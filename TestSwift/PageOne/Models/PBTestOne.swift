@@ -12,20 +12,20 @@ import UIKit
 class PBTestOne: NSObject {
     var errno: String?
     var errmsg: String?
-    var ext: [String : AnyObject]? // dict
-    var extend: [String : AnyObject]? // dict
-    var data: [AnyObject]? // arr
+    var ext: [String : Any]? // dict
+    var extend: [String : Any]? // dict
+    var data: [Any]? // arr
     var has_more: Int?
     var queryid: String?
     
     var extModel: PBTestOneExt?
     var dataAddIsNull: Bool = false
     
-    class func testOne(_ dict: [String : AnyObject]) -> PBTestOne {
+    class func testOne(_ dict: [String : Any]) -> PBTestOne {
         return PBTestOne(dict: dict)
     }
     
-    init(dict: [String : AnyObject]) {
+    init(dict: [String : Any]) {
         super.init();
         
         // 所有键全部赋值,所有键对应的值全部赋值给与键同名的成语变量
@@ -34,7 +34,7 @@ class PBTestOne: NSObject {
         // 特殊处理模型对象中数据类型为数组的成员变量
         var objsData = [PBTestOneData]()
         for dic in self.data! {
-            let testOneData: PBTestOneData = PBTestOneData.testOneData(dic as! [String : AnyObject])
+            let testOneData: PBTestOneData = PBTestOneData.testOneData(dic as! [String : Any])
             objsData.append(testOneData)
         }
         self.data = objsData

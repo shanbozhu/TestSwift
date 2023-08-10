@@ -21,11 +21,11 @@ class PBTestOneData: NSObject {
     var img2: [String]?
     var cellHeight: CGFloat = 0
     
-    class func testOneData(_ dict: [String : AnyObject]) -> PBTestOneData {
+    class func testOneData(_ dict: [String : Any]) -> PBTestOneData {
         return PBTestOneData(dict: dict)
     }
     
-    init(dict: [String : AnyObject]) {
+    init(dict: [String : Any]) {
         super.init()
         
         // 所有键全部赋值
