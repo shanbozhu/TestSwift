@@ -86,8 +86,8 @@ class PBTestOneCell: UITableViewCell {
         self.twoLab?.textColor = UIColor(white: 0, alpha: 1)
         self.twoLab?.numberOfLines = 0
         self.twoLab?.font = UIFont.systemFont(ofSize: 16)
-        self.twoLab!.frame = CGRect(x: 68, y: (self.oneLab!.frame).maxY+10, width: sWidth-68-20, height: 0)
-        self.twoLab?.text = self.testOneData!.word! + self.testOneData!.word! + self.testOneData!.word!
+        self.twoLab?.frame = CGRect(x: 68, y: (self.oneLab?.frame.maxY ?? 0)+10, width: sWidth-68-20, height: 0)
+        self.twoLab?.text = (self.testOneData?.word ?? "") + (self.testOneData?.word ?? "") + (self.testOneData?.word ?? "")
         self.twoLab?.sizeToFit()
         
         // 图片
