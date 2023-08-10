@@ -1,6 +1,6 @@
 //
 //  PBTestOneView.swift
-//  swift2016.04.05
+//  TestSwift
 //
 //  Created by DaMaiIOS on 16/4/5.
 //  Copyright © 2016年 朱善波. All rights reserved.
@@ -85,7 +85,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let testOneData: PBTestOneData = self.testOne?.data![indexPath.row] as? PBTestOneData ?? PBTestOneData(dict: [:])
+        let testOneData: PBTestOneData = self.testOne?.data?[indexPath.row] as? PBTestOneData ?? PBTestOneData(dict: [:])
         if testOneData.cellHeight == 0 {
             let cell = self.tableView(self.tableView, cellForRowAt: indexPath)
             cell.removeFromSuperview()
@@ -97,7 +97,7 @@ class PBTestOneView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PBTestOneCell = PBTestOneCell.testOneCell(tableView)
-        let testOneData: PBTestOneData = self.testOne?.data![indexPath.row] as? PBTestOneData ?? PBTestOneData(dict: [:])
+        let testOneData: PBTestOneData = self.testOne?.data?[indexPath.row] as? PBTestOneData ?? PBTestOneData(dict: [:])
         cell.testOneData = testOneData
         return cell;
     }
