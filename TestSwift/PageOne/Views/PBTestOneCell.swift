@@ -96,7 +96,7 @@ class PBTestOneCell: UITableViewCell {
         self.twoImageView?.backgroundColor = UIColor.blue
         if self.testOneData?.img2?.count ?? 0 > 0 {
             self.twoImageView?.frame = CGRect(x: 68, y: (self.twoLab?.frame.maxY ?? 0) + 10, width: 120, height: 120)
-            self.twoImageView?.sd_setImage(with: URL(string: self.testOneData!.img2![0]), placeholderImage: UIImage(named: "zhanwei"))
+            self.twoImageView?.sd_setImage(with: URL(string: self.testOneData?.img2?[0] ?? ""), placeholderImage: UIImage(named: "zhanwei"))
             self.twoImageView?.isHidden = false
         } else {
             self.twoImageView?.frame = CGRect(x: 68, y: (self.twoLab?.frame.maxY ?? 0), width: 0, height: 0)
